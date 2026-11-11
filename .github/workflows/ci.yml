@@ -1,0 +1,103 @@
+name: ci
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  test:
+    name: lint and tests
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+      - run: pip install torch --index-url https://download.pytorch.org/whl/cpu
+      - run: pip install -e ".[dev]"
+      - run: ruff check . && ruff format --check .
+      - run: pytest -q
+        env:
+          OMP_NUM_THREADS: "1"
+
+  spark:
+    name: features.sql on Spark equals DuckDB
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+      - uses: actions/setup-java@v5
+        with:
+          distribution: temurin
+          java-version: "17"
+      - run: pip install torch --index-url https://download.pytorch.org/whl/cpu
+      - run: pip install -e ".[dev,spark]"
+      - run: pytest -q -m spark
+
+  airflow:
+    name: the DAG imports in Airflow
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+      - run: pip install "apache-airflow==2.10.5" --constraint https://raw.githubusercontent.com/apache/airflow/constraints-2.10.5/constraints-3.12.txt
+      - name: DagBag has no import errors
+        env:
+          AIRFLOW__CORE__LOAD_EXAMPLES: "false"
+        run: |
+          python - <<'PY'
+          from airflow.models import DagBag
+          bag = DagBag("dags", include_examples=False)
+          assert not bag.import_errors, bag.import_errors
+          dag = bag.get_dag("home_ranker_daily")
+          print([t.task_id for t in dag.topological_sort()])
+          PY
+
+  container:
+    name: SageMaker container smoke test
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+      - run: pip install torch --index-url https://download.pytorch.org/whl/cpu
+      - run: pip install -e .
+      - run: python scripts/train_bundle.py build/bundle --world world_small --seed 5
+      - run: docker build -t home-ranker:ci .
+      - name: /ping and /invocations
+        run: |
+          docker run -d --name hr -p 8080:8080 -e FHR_WORLD=world_small -e FHR_SEED=5 \
+            -v "$PWD/build/bundle:/opt/ml/model:ro" home-ranker:ci
+          for i in $(seq 1 60); do curl -sf localhost:8080/ping && break; sleep 2; done
+          curl -sf -X POST localhost:8080/invocations -H 'content-type: application/json' \
+            -d '{"customer": 3, "minute": 13740}' | python -c "import json,sys; b=json.load(sys.stdin); assert b['rows'], b; print(b['policy'], len(b['rows']), b['ms'])"
+      - if: failure()
+        run: docker logs hr | tail -50
+
+  web:
+    name: dashboard
+    runs-on: ubuntu-24.04
+    defaults:
+      run:
+        working-directory: web
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
+        with:
+          node-version: "22"
+      - run: npm ci
+      - run: npm test
+      - run: npm run build

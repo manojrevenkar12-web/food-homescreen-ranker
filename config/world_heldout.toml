@@ -1,0 +1,61 @@
+# HELD OUT. A city nobody tuned against: another cuisine mix, more new merchants, tighter kitchens,
+# more customers. Scored once by scripts/heldout.py (see docs/heldout.md).
+# THE TRUTH of the simulated city. Only src/fhr/world/ and src/fhr/evals/ read this file.
+# Customers have tastes nobody logs; kitchens slow down when too many orders reach them at once.
+
+[city]
+grid = 6                  # zones per side
+zone_km = 1.4
+delivery_radius_km = 4.5
+dim = 8                   # taste space
+
+[merchants]
+n = 520
+new_share = 0.12          # joined in the last 14 days: no orders, no rating
+promoted_share = 0.10
+commission = [0.15, 0.30]
+capacity_mean = 2.6       # orders per hour a kitchen handles before it slows down
+capacity_sigma = 0.45
+prep_minutes = [9.0, 22.0]
+quality_sd = 1.0
+cuisines = ["pizza", "burger", "sushi", "indian", "vietnamese", "doner", "italian", "chinese", "thai",
+            "mexican", "salad", "breakfast", "dessert", "korean", "georgian", "grocery"]
+cuisine_weights = [7, 6, 9, 9, 7, 3, 5, 8, 6, 2, 7, 5, 4, 6, 1, 5]
+breakfast = ["breakfast", "dessert", "grocery"]
+basket_eur = [14.0, 21.0, 32.0]   # mean basket by price level 1..3
+
+[customers]
+n = 14000
+sessions_per_week = 1.6
+cuisine_concentration = 0.35      # Dirichlet: low = few favourite cuisines
+price_sensitivity = [0.25, 0.6]   # lognormal mean, sigma
+eta_sensitivity = [0.55, 0.5]
+novelty = [2.0, 5.0]              # Beta: appetite for places never ordered from
+loyalty = [2.0, 3.0]              # Beta: pull of places ordered from before
+
+[behaviour]
+row_attention = 0.78              # chance to look at the next row down
+card_attention = 0.72             # chance to swipe to the next card in a row
+visible_cards = 2                 # cards on screen before swiping
+click_threshold = 2.6
+order_threshold = 3.3             # utility of the outside option (cooking, another app)
+search_rate = 0.25                # share of sessions that fall back to search when nothing on the page works
+search_cost = 2.2
+noise = 0.9                       # Gumbel scale of session-level taste noise
+quality_weight = 0.55
+distance_weight = 0.12
+late_minutes = 45
+late_penalty = 0.6                # a late order lowers the customer's appetite for that place
+
+[congestion]
+start_load = 0.7                  # load (orders this hour / capacity) where kitchens start to slow
+minutes = 26.0                    # delay at double the start load
+power = 1.5
+courier_wait = [2.0, 7.0]
+
+[time]
+history_days = 14
+eval_days = 7
+lunch = [11, 14]
+dinner = [17, 21]
+hour_weights = [0,0,0,0,0,0,1,2,3,3,3,6,9,8,5,3,3,6,10,11,9,6,3,1]

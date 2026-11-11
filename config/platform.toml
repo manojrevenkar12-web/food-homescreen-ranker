@@ -1,0 +1,62 @@
+# Settings for everything that decides. Nothing here is truth about the simulated city.
+
+[policy]
+new_days = 14              # a merchant counts as new for this many days after joining
+explore_rate = 0.08        # share of logging sessions served a shuffled page (known propensities)
+
+[two_tower]
+dim = 32
+epochs = 6
+batch = 512
+lr = 0.01
+temperature = 0.1
+id_dropout = 0.3           # drop the merchant id embedding this often, so the content path learns cold start
+history_len = 20
+retrieve = 120             # candidates handed to the ranker
+
+[sequential]
+dim = 32
+epochs = 6
+lr = 0.005
+batch = 256
+history_len = 12
+min_gain_recall10 = 0.02   # ship only if it beats the count-based order-again row by this much
+
+[ranker]
+objective = "lambdarank"
+num_leaves = 31
+learning_rate = 0.05
+n_estimators = 300
+min_child_samples = 40
+label_order = 3
+label_click = 1
+valid_days = 3             # last days of the logs held out for offline evaluation
+
+[page]
+rows = 6
+cards = 8
+gmv_weight = 0.25          # value = P(order) x (1 + gmv_weight x commission / median commission)
+congestion_start = 0.6     # live load where a kitchen's score starts to be discounted
+congestion_strength = 1.6
+explore_bonus = 0.6        # UCB bonus scale for merchants with few impressions
+explore_prior = 30         # impressions after which the bonus has mostly faded
+promoted_min_top3 = 2      # contract: promoted cards in the first three rows
+new_min_cards = 3          # guardrail: cards from new merchants on every page that has new merchants nearby
+row_decay = 0.78           # the platform's own estimate of row attention, fitted from exploration logs
+
+[experiment]
+cupe_days = 14             # pre-period for CUPED
+clusters = 4               # zone clusters for the cluster-randomised design
+replications = 4
+alpha = 0.05
+
+[gate]
+min_lift_lb = 0.0          # lower bound of orders-per-session lift must clear this
+max_late_increase_pp = 0.5
+min_new_merchant_share = 0.02      # share of orders that go to merchants that joined in the last 14 days
+max_top10_share_increase_pp = 3.0  # concentration of orders on the top 10% of merchants
+max_p95_ms = 40.0
+
+[eval]
+seeds = [11, 23, 37]
+heldout_seed = 47

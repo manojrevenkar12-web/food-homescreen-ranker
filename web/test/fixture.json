@@ -1,0 +1,161 @@
+{
+ "seeds": [
+  1
+ ],
+ "policies": [
+  {
+   "name": "current",
+   "label": "Today's screen",
+   "orders_per_session": 0.5,
+   "lift": 0,
+   "lift_min": 0,
+   "lift_max": 0,
+   "gap_closed": null,
+   "late_share": 0.05,
+   "new_merchant_share": 0.08,
+   "top10_share": 0.6,
+   "gmv_per_session": 10
+  },
+  {
+   "name": "page",
+   "label": "Assembled page",
+   "orders_per_session": 0.6,
+   "lift": 0.2,
+   "lift_min": 0.18,
+   "lift_max": 0.22,
+   "gap_closed": 0.6,
+   "late_share": 0.01,
+   "new_merchant_share": 0.06,
+   "top10_share": 0.5,
+   "gmv_per_session": 12
+  }
+ ],
+ "training": {
+  "ndcg8": {
+   "model": 0.57,
+   "served": 0.45,
+   "popularity": 0.4
+  },
+  "retrieval": {
+   "all": {
+    "tt@50": 0.78,
+    "pop@50": 0.73
+   },
+   "cold_start": {
+    "tt@50": 0.5
+   },
+   "cold_start_orders": 10
+  },
+  "sequential": {
+   "recall10_gru": 0.4,
+   "recall10_counts": 0.32,
+   "ships": true
+  },
+  "attention": {
+   "row_decay": 0.65,
+   "card_decay": 0.7
+  }
+ },
+ "experiments": {
+  "page": {
+   "truth": 0.1,
+   "customer_split": [
+    {
+     "diff": 0.11,
+     "lo": 0.09,
+     "hi": 0.13
+    }
+   ],
+   "customer_split_no_cuped": [
+    {
+     "diff": 0.12,
+     "lo": 0.08,
+     "hi": 0.16
+    }
+   ],
+   "switchback": [
+    {
+     "diff": 0.1,
+     "lo": 0.05,
+     "hi": 0.15
+    }
+   ]
+  }
+ },
+ "gate": {
+  "page": {
+   "ship": true,
+   "checks": [
+    {
+     "name": "orders per session",
+     "passed": true,
+     "detail": "lift +0.1"
+    }
+   ]
+  }
+ },
+ "serving": {
+  "p50_ms": 8,
+  "p95_ms": 14
+ },
+ "heldout": null,
+ "samples": {
+  "minute": "day 15, 19:05",
+  "customers": [
+   {
+    "customer": 3,
+    "past_orders": 0,
+    "today": [
+     {
+      "kind": "recommended",
+      "cards": [
+       {
+        "id": 1,
+        "name": "Pizzeria 1",
+        "cuisine": "pizza",
+        "eta": 24,
+        "promoted": false,
+        "new": false,
+        "load": 0.2
+       },
+       {
+        "id": 2,
+        "name": "Pizzeria 2",
+        "cuisine": "pizza",
+        "eta": 24,
+        "promoted": false,
+        "new": false,
+        "load": 0.2
+       }
+      ]
+     }
+    ],
+    "assembled": [
+     {
+      "kind": "for_you",
+      "cards": [
+       {
+        "id": 2,
+        "name": "Pizzeria 2",
+        "cuisine": "pizza",
+        "eta": 24,
+        "promoted": false,
+        "new": true,
+        "load": 0.2
+       },
+       {
+        "id": 1,
+        "name": "Pizzeria 1",
+        "cuisine": "pizza",
+        "eta": 24,
+        "promoted": false,
+        "new": false,
+        "load": 0.9
+       }
+      ]
+     }
+    ]
+   }
+  ]
+ }
+}

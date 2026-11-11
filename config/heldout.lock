@@ -1,0 +1,16 @@
+{
+  "pinned": "2026-11-11",
+  "note": "Pinned before the held-out run; scripts/heldout.py refuses to run if any changed, or twice.",
+  "files": {
+    "config/platform.toml": "23e013f36004eceafef044d75616739b32e1adf3e38234f156e9dfbd8f515263",
+    "config/world_heldout.toml": "037c8298dcdc9d626792e25e8bae0b77e98d0fd4caef7804dd26527e45453e8e",
+    "src/fhr/train.py": "0e7e317982b2ee9b4c20cdad4627fcb742f130b904736f03eaf5a1772ee9c678",
+    "src/fhr/features/features.sql": "c2d22325f93406e14fcafa44a700900ef4acdf37c787822901d28c11eecfd8b7",
+    "src/fhr/features/build.py": "017d0a36d93b133567c546615941a70b5d27cdec26f58d8a192f39f764f2115c",
+    "src/fhr/policies/learned.py": "8ec349f422935434baae23ebd3e154face9af2fea67f8ec3a9513b4046a633c6",
+    "src/fhr/policies/heuristic.py": "807f5efe4b0b8085478644dc344110c61d0d95525f9916c1821b402415144daf",
+    "src/fhr/models/two_tower.py": "7d7d96f7d2a6922111ecc60313118a0a304b984682fcde4051df149469426b29",
+    "src/fhr/models/ranker.py": "f4a50b0f9e065caee2ca16f10446dfb6196b0ad7ace4888249bde2ce3bb958cd",
+    "src/fhr/models/sequential.py": "2a54bd6f408998eef3ff628b239b252637d2e6813fda99509696674b30caa9e7"
+  }
+}
