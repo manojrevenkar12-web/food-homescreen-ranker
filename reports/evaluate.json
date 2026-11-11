@@ -1,0 +1,517 @@
+{
+  "seeds": {
+    "11": {
+      "training": {
+        "ndcg8": {
+          "model": 0.5776904151749991,
+          "served": 0.49925254726986185,
+          "popularity": 0.4541725481348088,
+          "tt_score": 0.5005951493028904
+        },
+        "ndcg8_explore": {
+          "model": 0.5479701147586739,
+          "served": 0.3683087926530328,
+          "popularity": 0.4043412397593774
+        },
+        "rows": {
+          "train": 98720,
+          "valid": 82856
+        },
+        "retrieval": {
+          "all": {
+            "tt@20": 0.6818501995773656,
+            "tt@50": 0.8121624794552712,
+            "tt@120": 0.9018548955153792,
+            "pop@20": 0.5773655787743602,
+            "pop@50": 0.7583939891993425,
+            "pop@120": 0.9081944118337638
+          },
+          "cold_start": {
+            "tt@20": 0.31666666666666665,
+            "tt@50": 0.49166666666666664,
+            "tt@120": 0.8166666666666667,
+            "pop@20": 0.0,
+            "pop@50": 0.0,
+            "pop@120": 0.025
+          },
+          "orders": 4379,
+          "cold_start_orders": 120
+        },
+        "sequential": {
+          "recall10_gru": 0.4652817302219693,
+          "recall10_counts": 0.3426294820717131,
+          "ships": true,
+          "orders": 3514
+        },
+        "attention": {
+          "row_decay": 0.6624964444929221,
+          "card_decay": 0.698888973111491
+        }
+      },
+      "history": {
+        "sessions": 38452,
+        "orders": 19552,
+        "explore_sessions": 3177
+      },
+      "metrics": {
+        "current": {
+          "sessions": 19144,
+          "orders_per_session": 0.5427287923109068,
+          "gmv_per_session": 10.341695843255561,
+          "commission_per_session": 2.2824327768824957,
+          "late_share": 0.04898941289701636,
+          "new_merchant_share": 0.0848893166506256,
+          "top10_share": 0.6614051973051011,
+          "search_share": 0.14273339749759384,
+          "merchants_with_orders": 449
+        },
+        "reranked": {
+          "sessions": 19144,
+          "orders_per_session": 0.6333577099874634,
+          "gmv_per_session": 11.842172716302375,
+          "commission_per_session": 2.587820839834658,
+          "late_share": 0.015835051546391754,
+          "new_merchant_share": 0.06457731958762887,
+          "top10_share": 0.5938144329896907,
+          "search_share": 0.09303092783505154,
+          "merchants_with_orders": 428
+        },
+        "page": {
+          "sessions": 19144,
+          "orders_per_session": 0.7094651065608023,
+          "gmv_per_session": 13.661049007682067,
+          "commission_per_session": 3.0509645546286834,
+          "late_share": 0.003681342953909586,
+          "new_merchant_share": 0.05595641289942571,
+          "top10_share": 0.5150935061110293,
+          "search_share": 0.060815785598586365,
+          "merchants_with_orders": 431
+        },
+        "page_no_congestion": {
+          "sessions": 19144,
+          "orders_per_session": 0.7088905139991643,
+          "gmv_per_session": 13.601933272341174,
+          "commission_per_session": 3.0466416223809154,
+          "late_share": 0.012526711369832732,
+          "new_merchant_share": 0.059612408812909884,
+          "top10_share": 0.5306904428560902,
+          "search_share": 0.0599071549627883,
+          "merchants_with_orders": 432
+        },
+        "page_no_explore": {
+          "sessions": 19144,
+          "orders_per_session": 0.7145842039281237,
+          "gmv_per_session": 13.770836499507125,
+          "commission_per_session": 3.0765617599285107,
+          "late_share": 0.004239766081871345,
+          "new_merchant_share": 0.055190058479532164,
+          "top10_share": 0.5288011695906433,
+          "search_share": 0.05899122807017544,
+          "merchants_with_orders": 418
+        },
+        "page_no_gmv": {
+          "sessions": 19144,
+          "orders_per_session": 0.7140618470539072,
+          "gmv_per_session": 13.196155741812001,
+          "commission_per_session": 2.907792924403983,
+          "late_share": 0.003950256035113387,
+          "new_merchant_share": 0.054937820043891736,
+          "top10_share": 0.5182882223847842,
+          "search_share": 0.061228968544257495,
+          "merchants_with_orders": 437
+        },
+        "oracle": {
+          "sessions": 19144,
+          "orders_per_session": 0.8028102799832846,
+          "gmv_per_session": 14.631066770422295,
+          "commission_per_session": 3.2344631708847515,
+          "late_share": 0.01795822760101503,
+          "new_merchant_share": 0.03318368143665821,
+          "top10_share": 0.5202680720931746,
+          "search_share": 0.03402953998308283,
+          "merchants_with_orders": 436
+        }
+      },
+      "lift_vs_current": {
+        "reranked": {
+          "diff": 0.09062891767655662,
+          "lo": 0.08490343111407461,
+          "hi": 0.09677787133695709,
+          "relative": 0.16698748796920115
+        },
+        "page": {
+          "diff": 0.16673631424989552,
+          "lo": 0.15908746530071569,
+          "hi": 0.1745893624813015,
+          "relative": 0.307218479307026
+        },
+        "page_no_congestion": {
+          "diff": 0.1661617216882574,
+          "lo": 0.15868781366743812,
+          "hi": 0.17381851968429687,
+          "relative": 0.3061597690086622
+        },
+        "page_no_explore": {
+          "diff": 0.17185541161721687,
+          "lo": 0.1645127262366091,
+          "hi": 0.17948219527210924,
+          "relative": 0.31665062560153995
+        },
+        "page_no_gmv": {
+          "diff": 0.17133305474300042,
+          "lo": 0.16346979937184097,
+          "hi": 0.17849420566482163,
+          "relative": 0.31568816169393654
+        },
+        "oracle": {
+          "diff": 0.26008148767237776,
+          "lo": 0.25275458052593697,
+          "hi": 0.2680459881889843,
+          "relative": 0.4792107795957652
+        }
+      }
+    },
+    "23": {
+      "training": {
+        "ndcg8": {
+          "model": 0.5812675777069884,
+          "served": 0.5031508303928164,
+          "popularity": 0.4607208927387274,
+          "tt_score": 0.5124997418301565
+        },
+        "ndcg8_explore": {
+          "model": 0.5274422636488058,
+          "served": 0.3683981531124315,
+          "popularity": 0.40445985158208897
+        },
+        "rows": {
+          "train": 99858,
+          "valid": 85721
+        },
+        "retrieval": {
+          "all": {
+            "tt@20": 0.7024213622991627,
+            "tt@50": 0.850418646752659,
+            "tt@120": 0.9341479972844535,
+            "pop@20": 0.5768273365014709,
+            "pop@50": 0.7963340122199593,
+            "pop@120": 0.9269065399411631
+          },
+          "cold_start": {
+            "tt@20": 0.07006369426751592,
+            "tt@50": 0.19745222929936307,
+            "tt@120": 0.5095541401273885,
+            "pop@20": 0.0,
+            "pop@50": 0.0,
+            "pop@120": 0.006369426751592357
+          },
+          "orders": 4576,
+          "cold_start_orders": 157
+        },
+        "sequential": {
+          "recall10_gru": 0.4837837837837838,
+          "recall10_counts": 0.3521621621621622,
+          "ships": true,
+          "orders": 3700
+        },
+        "attention": {
+          "row_decay": 0.6777214986799742,
+          "card_decay": 0.7036323411729878
+        }
+      },
+      "history": {
+        "sessions": 38217,
+        "orders": 20691,
+        "explore_sessions": 3138
+      },
+      "metrics": {
+        "current": {
+          "sessions": 19187,
+          "orders_per_session": 0.5783082295304112,
+          "gmv_per_session": 10.974259002151966,
+          "commission_per_session": 2.569623658870967,
+          "late_share": 0.030912040374909876,
+          "new_merchant_share": 0.15356885364095169,
+          "top10_share": 0.655281182408075,
+          "search_share": 0.12013338139870224,
+          "merchants_with_orders": 444
+        },
+        "reranked": {
+          "sessions": 19187,
+          "orders_per_session": 0.6511179444415489,
+          "gmv_per_session": 12.157569479452901,
+          "commission_per_session": 2.8285177859309094,
+          "late_share": 0.022412551028576002,
+          "new_merchant_share": 0.12919234771472024,
+          "top10_share": 0.5940926919074682,
+          "search_share": 0.08372688705675178,
+          "merchants_with_orders": 427
+        },
+        "page": {
+          "sessions": 19187,
+          "orders_per_session": 0.7305988429665919,
+          "gmv_per_session": 13.841984062339856,
+          "commission_per_session": 3.227710607005038,
+          "late_share": 0.0056356113568269365,
+          "new_merchant_share": 0.10721928948494792,
+          "top10_share": 0.5294621201312598,
+          "search_share": 0.057069482094449994,
+          "merchants_with_orders": 437
+        },
+        "page_no_congestion": {
+          "sessions": 19187,
+          "orders_per_session": 0.7287746911971648,
+          "gmv_per_session": 13.846607498923015,
+          "commission_per_session": 3.2388327029898103,
+          "late_share": 0.018379460773796753,
+          "new_merchant_share": 0.10477007795179862,
+          "top10_share": 0.5534577701494672,
+          "search_share": 0.05742687549166845,
+          "merchants_with_orders": 427
+        },
+        "page_no_explore": {
+          "sessions": 19187,
+          "orders_per_session": 0.7332568926877573,
+          "gmv_per_session": 13.95572273557378,
+          "commission_per_session": 3.262228937105587,
+          "late_share": 0.006112730115857559,
+          "new_merchant_share": 0.1061909161987348,
+          "top10_share": 0.535148198166181,
+          "search_share": 0.056151823157296187,
+          "merchants_with_orders": 422
+        },
+        "page_no_gmv": {
+          "sessions": 19187,
+          "orders_per_session": 0.7344035023713973,
+          "gmv_per_session": 13.521171760222964,
+          "commission_per_session": 3.130237520190196,
+          "late_share": 0.005038677169824711,
+          "new_merchant_share": 0.11354765453126109,
+          "top10_share": 0.5325384997516145,
+          "search_share": 0.05478674331133348,
+          "merchants_with_orders": 430
+        },
+        "oracle": {
+          "sessions": 19187,
+          "orders_per_session": 0.8164382133736384,
+          "gmv_per_session": 14.944716646729296,
+          "commission_per_session": 3.4670469821138417,
+          "late_share": 0.025981487392275775,
+          "new_merchant_share": 0.09588254069581871,
+          "top10_share": 0.5214810086179381,
+          "search_share": 0.03057772103415257,
+          "merchants_with_orders": 412
+        }
+      },
+      "lift_vs_current": {
+        "reranked": {
+          "diff": 0.07280971491113775,
+          "lo": 0.06685139380614633,
+          "hi": 0.07859585944839141,
+          "relative": 0.125901225666907
+        },
+        "page": {
+          "diff": 0.15229061343618075,
+          "lo": 0.14425575071754515,
+          "hi": 0.159850355767237,
+          "relative": 0.26333813987022353
+        },
+        "page_no_congestion": {
+          "diff": 0.15046646166675354,
+          "lo": 0.14262460033106186,
+          "hi": 0.15743796115997086,
+          "relative": 0.26018385003604905
+        },
+        "page_no_explore": {
+          "diff": 0.15494866315734612,
+          "lo": 0.14739080074450805,
+          "hi": 0.1625951590141918,
+          "relative": 0.2679343907714492
+        },
+        "page_no_gmv": {
+          "diff": 0.1560952728409861,
+          "lo": 0.14849011935300993,
+          "hi": 0.16377092667526513,
+          "relative": 0.2699170872386446
+        },
+        "oracle": {
+          "diff": 0.23812998384322717,
+          "lo": 0.23018937650759863,
+          "hi": 0.2451090647939894,
+          "relative": 0.41177000720980533
+        }
+      }
+    },
+    "37": {
+      "training": {
+        "ndcg8": {
+          "model": 0.581091447387248,
+          "served": 0.5010565700546749,
+          "popularity": 0.4602526922712058,
+          "tt_score": 0.5072415826130436
+        },
+        "ndcg8_explore": {
+          "model": 0.559127721486584,
+          "served": 0.41470072032800503,
+          "popularity": 0.4242818410308774
+        },
+        "rows": {
+          "train": 98670,
+          "valid": 80727
+        },
+        "retrieval": {
+          "all": {
+            "tt@20": 0.6981818181818182,
+            "tt@50": 0.8345454545454546,
+            "tt@120": 0.9143181818181818,
+            "pop@20": 0.5788636363636364,
+            "pop@50": 0.7913636363636364,
+            "pop@120": 0.9293181818181818
+          },
+          "cold_start": {
+            "tt@20": 0.08,
+            "tt@50": 0.152,
+            "tt@120": 0.408,
+            "pop@20": 0.0,
+            "pop@50": 0.0,
+            "pop@120": 0.016
+          },
+          "orders": 4525,
+          "cold_start_orders": 125
+        },
+        "sequential": {
+          "recall10_gru": 0.463111356728378,
+          "recall10_counts": 0.3473335175462835,
+          "ships": true,
+          "orders": 3619
+        },
+        "attention": {
+          "row_decay": 0.6597116162736352,
+          "card_decay": 0.6986321011430702
+        }
+      },
+      "history": {
+        "sessions": 38526,
+        "orders": 20240,
+        "explore_sessions": 3099
+      },
+      "metrics": {
+        "current": {
+          "sessions": 19039,
+          "orders_per_session": 0.562161878249908,
+          "gmv_per_session": 10.385692111265081,
+          "commission_per_session": 2.3769931099397095,
+          "late_share": 0.06941978884424928,
+          "new_merchant_share": 0.13080444735120994,
+          "top10_share": 0.6613099131084743,
+          "search_share": 0.13108474259553396,
+          "merchants_with_orders": 436
+        },
+        "reranked": {
+          "sessions": 19039,
+          "orders_per_session": 0.6511896633226535,
+          "gmv_per_session": 12.098441937800011,
+          "commission_per_session": 2.7147965721335865,
+          "late_share": 0.0423455396031618,
+          "new_merchant_share": 0.1114695918696564,
+          "top10_share": 0.6434102274560413,
+          "search_share": 0.08501371188901435,
+          "merchants_with_orders": 430
+        },
+        "page": {
+          "sessions": 19039,
+          "orders_per_session": 0.7367508797730973,
+          "gmv_per_session": 13.849388475869441,
+          "commission_per_session": 3.092789229948591,
+          "late_share": 0.009838169245027447,
+          "new_merchant_share": 0.10465530762101662,
+          "top10_share": 0.5703286518856491,
+          "search_share": 0.05468025949953661,
+          "merchants_with_orders": 420
+        },
+        "page_no_congestion": {
+          "sessions": 19039,
+          "orders_per_session": 0.7337045012868323,
+          "gmv_per_session": 13.746427487845978,
+          "commission_per_session": 3.0713730725352537,
+          "late_share": 0.02498389290571981,
+          "new_merchant_share": 0.10551936430667908,
+          "top10_share": 0.5863698188846732,
+          "search_share": 0.053976662610065146,
+          "merchants_with_orders": 412
+        },
+        "page_no_explore": {
+          "sessions": 19039,
+          "orders_per_session": 0.7348075003939283,
+          "gmv_per_session": 13.854513429509348,
+          "commission_per_session": 3.1017392139228472,
+          "late_share": 0.009578270192994997,
+          "new_merchant_share": 0.10550393137955683,
+          "top10_share": 0.5772694781987133,
+          "search_share": 0.05246604717655468,
+          "merchants_with_orders": 410
+        },
+        "page_no_gmv": {
+          "sessions": 19039,
+          "orders_per_session": 0.7369609748411156,
+          "gmv_per_session": 13.636149665354095,
+          "commission_per_session": 3.029369453313681,
+          "late_share": 0.009407740004276246,
+          "new_merchant_share": 0.10683486565462191,
+          "top10_share": 0.5695246240467536,
+          "search_share": 0.05494975411588625,
+          "merchants_with_orders": 415
+        },
+        "oracle": {
+          "sessions": 19039,
+          "orders_per_session": 0.8124376280266821,
+          "gmv_per_session": 14.947265087891049,
+          "commission_per_session": 3.2991201720118717,
+          "late_share": 0.03820791311093871,
+          "new_merchant_share": 0.09180243082492888,
+          "top10_share": 0.5601887768295837,
+          "search_share": 0.030967158003620376,
+          "merchants_with_orders": 409
+        }
+      },
+      "lift_vs_current": {
+        "reranked": {
+          "diff": 0.08902778507274542,
+          "lo": 0.0823765486861142,
+          "hi": 0.09620280472375553,
+          "relative": 0.15836681304307204
+        },
+        "page": {
+          "diff": 0.17458900152318924,
+          "lo": 0.16708920069958838,
+          "hi": 0.18266006262774293,
+          "relative": 0.3105671307110156
+        },
+        "page_no_congestion": {
+          "diff": 0.17154262303692422,
+          "lo": 0.16413673968040446,
+          "hi": 0.17962396482110587,
+          "relative": 0.3051480893207512
+        },
+        "page_no_explore": {
+          "diff": 0.17264562214402016,
+          "lo": 0.16488076677736282,
+          "hi": 0.1810887723243247,
+          "relative": 0.3071101560310193
+        },
+        "page_no_gmv": {
+          "diff": 0.17479909659120751,
+          "lo": 0.1665365508124365,
+          "hi": 0.18259545713462033,
+          "relative": 0.31094085770344765
+        },
+        "oracle": {
+          "diff": 0.25027574977677397,
+          "lo": 0.24257153396710388,
+          "hi": 0.2584786952838223,
+          "relative": 0.4452022797346538
+        }
+      }
+    }
+  }
+}

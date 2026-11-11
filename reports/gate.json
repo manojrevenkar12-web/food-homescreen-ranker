@@ -1,0 +1,62 @@
+{
+  "page": {
+    "ship": true,
+    "checks": [
+      {
+        "name": "orders per session",
+        "passed": true,
+        "detail": "lift +0.1406 (95% +0.1180 to +0.1676) must clear 0.0"
+      },
+      {
+        "name": "late orders",
+        "passed": true,
+        "detail": "late share 4.67% -> 0.35%"
+      },
+      {
+        "name": "new merchants",
+        "passed": true,
+        "detail": "orders to new merchants 5.2% (floor 2%)"
+      },
+      {
+        "name": "concentration",
+        "passed": true,
+        "detail": "top-10% merchants' share 65.9% -> 51.9%"
+      },
+      {
+        "name": "latency",
+        "passed": true,
+        "detail": "p95 7.2 ms (limit 40.0 ms)"
+      }
+    ]
+  },
+  "reranked": {
+    "ship": true,
+    "checks": [
+      {
+        "name": "orders per session",
+        "passed": true,
+        "detail": "lift +0.0627 (95% +0.0406 to +0.0872) must clear 0.0"
+      },
+      {
+        "name": "late orders",
+        "passed": true,
+        "detail": "late share 4.40% -> 1.71%"
+      },
+      {
+        "name": "new merchants",
+        "passed": true,
+        "detail": "orders to new merchants 6.2% (floor 2%)"
+      },
+      {
+        "name": "concentration",
+        "passed": true,
+        "detail": "top-10% merchants' share 66.0% -> 60.5%"
+      },
+      {
+        "name": "latency",
+        "passed": true,
+        "detail": "p95 7.2 ms (limit 40.0 ms)"
+      }
+    ]
+  }
+}

@@ -33,7 +33,7 @@ export function App({ fetcher = browserFetch }: { fetcher?: Fetcher }) {
           <Section id="policies" title="Against the truth" lede="Every home screen ran on the same simulated week: same customers, same moods, same scrolling. Only the page differed.">
             <Policies rows={load.data.policies} />
           </Section>
-          <Section id="designs" title="Which A/B test to trust" lede="Kitchens are shared, so a customer split lets each arm change the other's delivery times. Four replications of each design against the true effect.">
+          <Section id="designs" title="Which A/B test to trust" lede="Kitchens are shared and customers carry their history from one session to the next, so neither a customer split nor a switchback sees exactly what a full rollout would. Four replications of each, against the true effect.">
             <Designs experiments={load.data.experiments} />
           </Section>
           <Section id="models" title="The models underneath" lede="Retrieval, ranking and the order-again challenger, each scored on days the models never saw.">

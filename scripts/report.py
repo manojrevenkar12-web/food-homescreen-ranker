@@ -56,11 +56,19 @@ def policies(ev: dict) -> list[dict]:
     return out
 
 
+def mean_tree(xs: list):
+    """Average numbers leaf by leaf across seeds; a flag holds only if it holds in every seed."""
+    if isinstance(xs[0], dict):
+        return {k: mean_tree([x[k] for x in xs]) for k in xs[0]}
+    if isinstance(xs[0], bool):
+        return all(xs)
+    return float(np.mean(xs))
+
+
 def build() -> dict:
     ev, ex, gate, serving, samples = (
         read(n) for n in ("evaluate.json", "experiments.json", "gate.json", "serving.json", "sample_pages.json")
     )
-    first = next(iter(ev["seeds"].values()))
     heldout = None
     if (REPORTS / "heldout.json").exists():
         h = read("heldout.json")
@@ -73,7 +81,7 @@ def build() -> dict:
     return {
         "seeds": [int(s) for s in ev["seeds"]],
         "policies": policies(ev),
-        "training": first["training"],
+        "training": mean_tree([s["training"] for s in ev["seeds"].values()]),
         "experiments": {
             k: {
                 "truth": v["truth"]["diff"],
@@ -101,12 +109,28 @@ def readme_block(d: dict) -> str:
         return f"{100 * x:+.{n}f}%"
 
     page, rer = p["page"], p["reranked"]
-    e = d["experiments"]["page"]
-    cover = {
-        k: sum(x["lo"] <= e["truth"] <= x["hi"] for x in e[k])
-        for k in ("customer_split_no_cuped", "customer_split", "switchback")
-    }
-    width = {k: np.mean([x["hi"] - x["lo"] for x in e[k]]) for k in cover}
+    ex = d["experiments"]
+
+    def design(k: str) -> list[tuple[float, int, float]]:
+        """Mean bias against the truth, replications whose interval holds it, mean interval width."""
+        out = []
+        for v in ex.values():
+            xs = v[k]
+            out.append(
+                (
+                    np.mean([x["diff"] for x in xs]) / v["truth"] - 1,
+                    sum(x["lo"] <= v["truth"] <= x["hi"] for x in xs),
+                    np.mean([x["hi"] - x["lo"] for x in xs]),
+                )
+            )
+        return out
+
+    def off(b: float) -> str:
+        return f"{abs(100 * b):.0f}% {'low' if b < 0 else 'high'}"
+
+    split, plain, sb = design("customer_split"), design("customer_split_no_cuped"), design("switchback")
+    n = len(next(iter(ex.values()))["switchback"])
+    narrow = np.mean([1 - a[2] / b[2] for a, b in zip(split, plain, strict=True)])
     t = d["training"]
     rows = [
         "| What | Result |",
@@ -121,9 +145,11 @@ def readme_block(d: dict) -> str:
         f"never-ordered merchants {pc(t['retrieval']['cold_start']['tt@50'], 0)} vs 0% |",
         f"| Ranking: NDCG@8 on held-out days | LambdaRank {t['ndcg8']['model']:.3f}, the page as served {t['ndcg8']['served']:.3f}, popularity {t['ndcg8']['popularity']:.3f} |",
         f"| Order-again row: next-order recall@10 | GRU {pc(t['sequential']['recall10_gru'], 0)} vs counts {pc(t['sequential']['recall10_counts'], 0)}: "
-        f"{'the GRU ships' if t['sequential']['ships'] else 'the GRU stays out'} |",
-        f"| A/B design, true effect {100 * e['truth']:+.2f} pp | interval holds the truth: customer split {cover['customer_split_no_cuped']}/4, "
-        f"with CUPED {cover['customer_split']}/4, switchback {cover['switchback']}/4 |",
+        f"{'the GRU ships in every city' if t['sequential']['ships'] else 'the GRU stays out'} |",
+        "| A/B designs vs the true full-rollout effect (assembled page; re-ranked rows) | estimates land "
+        + f"{off(split[0][0])} and {off(split[1][0])} with a customer split, {off(sb[0][0])} and {off(sb[1][0])} with a switchback; "
+        + f"intervals hold the truth {split[0][1]}/{n} and {split[1][1]}/{n} (split, CUPED), {sb[0][1]}/{n} and {sb[1][1]}/{n} (switchback); "
+        + f"CUPED narrows the split's interval by {pc(narrow, 0)} |",
         f"| Serving (HTTP, one core) | p50 {d['serving']['p50_ms']:.1f} ms, p95 {d['serving']['p95_ms']:.1f} ms |",
         "| Gate | " + ", ".join(f"{k}: **{'ships' if g['ship'] else 'held'}**" for k, g in d["gate"].items()) + " |",
     ]
@@ -133,7 +159,6 @@ def readme_block(d: dict) -> str:
             f"| Held-out city (scored once) | re-ranked {sg(h['reranked']['relative'])}, assembled **{sg(h['page']['relative'])}** "
             "orders per session |"
         )
-    _ = width
     return "\n".join(rows)
 
 

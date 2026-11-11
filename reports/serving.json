@@ -1,0 +1,8 @@
+{
+  "requests": 600,
+  "p50_ms": 5.847310499916603,
+  "p95_ms": 7.207205550071194,
+  "p99_ms": 7.719694040015383,
+  "bundle_digest": "sha256:4a820ae5f64062e032578838d125b6b81453e4ca7cfe217e35b40265030a2e5c",
+  "note": "end to end through the HTTP service, one CPU core"
+}

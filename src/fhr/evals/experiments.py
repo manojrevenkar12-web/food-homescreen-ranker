@@ -55,15 +55,21 @@ def switchback(
     return w.logs()
 
 
-def analyse_customer_split(logs: Logs, pre: pd.Series, reps: int = 1000, seed: int = 0, cuped: bool = True) -> dict:
-    """Difference in orders per session, treatment minus control, customers resampled. CUPED uses each
-    customer's orders in the pre-period."""
+def analyse_customer_split(logs: Logs, pre: pd.DataFrame, reps: int = 1000, seed: int = 0, cuped: bool = True) -> dict:
+    """Difference in orders per session, treatment minus control, customers resampled.
+
+    Orders per session is a ratio, so CUPED works on its linearisation: each customer's orders minus the
+    pooled rate times their sessions, adjusted by what their pre-period order rate predicts for the same
+    number of sessions. `pre` has each customer's pre-period `orders` and `sessions`."""
     s = logs.sessions
     per = s.groupby(["customer", "policy"]).agg(sessions=("sid", "size"), orders=("ordered", "sum")).reset_index()
-    per["x"] = pre.reindex(per.customer).fillna(0).to_numpy()
-    if cuped:
-        theta = np.cov(per.orders, per.x)[0, 1] / max(np.var(per.x), 1e-12)
-        per["y"] = per.orders - theta * (per.x - per.x.mean())
+    if cuped and len(pre):
+        base = pre.orders.sum() / max(pre.sessions.sum(), 1)
+        rate = (pre.orders / pre.sessions.clip(lower=1)).reindex(per.customer).fillna(base).to_numpy()
+        lin = per.orders - per.orders.sum() / per.sessions.sum() * per.sessions
+        cov = (rate - base) * per.sessions.to_numpy()
+        theta = np.cov(lin, cov)[0, 1] / max(np.var(cov, ddof=1), 1e-12)
+        per["y"] = per.orders - theta * cov
     else:
         per["y"] = per.orders.astype(float)
     t, c = per[per.policy == "treatment"], per[per.policy == "control"]

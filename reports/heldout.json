@@ -1,0 +1,137 @@
+{
+  "lock": {
+    "pinned": "2026-11-11",
+    "note": "Pinned before the held-out run; scripts/heldout.py refuses to run if any changed, or twice.",
+    "files": {
+      "config/platform.toml": "23e013f36004eceafef044d75616739b32e1adf3e38234f156e9dfbd8f515263",
+      "config/world_heldout.toml": "037c8298dcdc9d626792e25e8bae0b77e98d0fd4caef7804dd26527e45453e8e",
+      "src/fhr/train.py": "0e7e317982b2ee9b4c20cdad4627fcb742f130b904736f03eaf5a1772ee9c678",
+      "src/fhr/features/features.sql": "c2d22325f93406e14fcafa44a700900ef4acdf37c787822901d28c11eecfd8b7",
+      "src/fhr/features/build.py": "017d0a36d93b133567c546615941a70b5d27cdec26f58d8a192f39f764f2115c",
+      "src/fhr/policies/learned.py": "8ec349f422935434baae23ebd3e154face9af2fea67f8ec3a9513b4046a633c6",
+      "src/fhr/policies/heuristic.py": "807f5efe4b0b8085478644dc344110c61d0d95525f9916c1821b402415144daf",
+      "src/fhr/models/two_tower.py": "7d7d96f7d2a6922111ecc60313118a0a304b984682fcde4051df149469426b29",
+      "src/fhr/models/ranker.py": "f4a50b0f9e065caee2ca16f10446dfb6196b0ad7ace4888249bde2ce3bb958cd",
+      "src/fhr/models/sequential.py": "2a54bd6f408998eef3ff628b239b252637d2e6813fda99509696674b30caa9e7"
+    }
+  },
+  "training": {
+    "ndcg8": {
+      "model": 0.5792911042869658,
+      "served": 0.49678437698945394,
+      "popularity": 0.45051973759974473,
+      "tt_score": 0.5040686839891658
+    },
+    "ndcg8_explore": {
+      "model": 0.5497596104681902,
+      "served": 0.36359266930620565,
+      "popularity": 0.40178265652190176
+    },
+    "rows": {
+      "train": 114569,
+      "valid": 95532
+    },
+    "retrieval": {
+      "all": {
+        "tt@20": 0.6933570581257414,
+        "tt@50": 0.8236457097667063,
+        "tt@120": 0.9134045077105575,
+        "pop@20": 0.6037959667852907,
+        "pop@50": 0.7730328192961645,
+        "pop@120": 0.9066824831949387
+      },
+      "cold_start": {
+        "tt@20": 0.099601593625498,
+        "tt@50": 0.21912350597609562,
+        "tt@120": 0.4541832669322709,
+        "pop@20": 0.0,
+        "pop@50": 0.0,
+        "pop@120": 0.01593625498007968
+      },
+      "orders": 5309,
+      "cold_start_orders": 251
+    },
+    "sequential": {
+      "recall10_gru": 0.46199244570349385,
+      "recall10_counts": 0.336166194523135,
+      "ships": true,
+      "orders": 4236
+    },
+    "attention": {
+      "row_decay": 0.6621411019125567,
+      "card_decay": 0.697245360075972
+    }
+  },
+  "metrics": {
+    "current": {
+      "sessions": 22428,
+      "orders_per_session": 0.5730782949884073,
+      "gmv_per_session": 10.450771096909047,
+      "commission_per_session": 2.417901512747435,
+      "late_share": 0.04528125729401696,
+      "new_merchant_share": 0.15085972146580565,
+      "top10_share": 0.6628802614175678,
+      "search_share": 0.1279856842760445,
+      "merchants_with_orders": 485
+    },
+    "reranked": {
+      "sessions": 22428,
+      "orders_per_session": 0.6359015516318887,
+      "gmv_per_session": 11.386421348727577,
+      "commission_per_session": 2.6390484630918047,
+      "late_share": 0.029448885149347917,
+      "new_merchant_share": 0.13581545365306408,
+      "top10_share": 0.633221147104193,
+      "search_share": 0.09535829476931706,
+      "merchants_with_orders": 482
+    },
+    "page": {
+      "sessions": 22428,
+      "orders_per_session": 0.7287319422150883,
+      "gmv_per_session": 13.659307526634622,
+      "commission_per_session": 3.1756385187793006,
+      "late_share": 0.006546744982868331,
+      "new_merchant_share": 0.1284263338228096,
+      "top10_share": 0.5076480665687714,
+      "search_share": 0.05818649045521292,
+      "merchants_with_orders": 471
+    }
+  },
+  "lift_vs_current": {
+    "reranked": {
+      "diff": 0.06282325664348136,
+      "lo": 0.05737651527856014,
+      "hi": 0.0682530965446449,
+      "relative": 0.10962421224616821
+    },
+    "page": {
+      "diff": 0.15565364722668093,
+      "lo": 0.14898488784074254,
+      "hi": 0.16280443706977668,
+      "relative": 0.2716097409165175
+    }
+  },
+  "guardrails": {
+    "current": {
+      "current": {
+        "late_share": 0.04528125729401696,
+        "new_merchant_share": 0.15085972146580565,
+        "top10_share": 0.6628802614175678
+      }
+    },
+    "reranked": {
+      "reranked": {
+        "late_share": 0.029448885149347917,
+        "new_merchant_share": 0.13581545365306408,
+        "top10_share": 0.633221147104193
+      }
+    },
+    "page": {
+      "page": {
+        "late_share": 0.006546744982868331,
+        "new_merchant_share": 0.1284263338228096,
+        "top10_share": 0.5076480665687714
+      }
+    }
+  }
+}

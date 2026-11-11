@@ -24,8 +24,26 @@ def test_customer_split_recovers_a_planted_effect():
         for k in range(3):
             p = 0.5 if arm == "treatment" else 0.4
             rows.append((c * 10 + k, 0, 12, 720, c, arm, False, bool(rng.random() < p), None))
-    res = analyse_customer_split(_logs(rows), pd.Series(dtype=float), reps=200, cuped=False)
+    res = analyse_customer_split(_logs(rows), pd.DataFrame({"orders": [], "sessions": []}), reps=200, cuped=False)
     assert res["lo"] < 0.1 < res["hi"]
+
+
+def test_cuped_narrows_the_interval_and_keeps_the_effect():
+    rng = np.random.default_rng(1)
+    rows, pre = [], []
+    for c in range(3000):
+        arm = "treatment" if c % 2 else "control"
+        base = rng.uniform(0.1, 0.8)  # customers differ a lot in how often they order
+        pre.append((c, rng.binomial(40, base), 40))
+        for k in range(int(rng.integers(1, 6))):
+            rows.append(
+                (c * 10 + k, 0, 12, 720, c, arm, False, bool(rng.random() < base + 0.05 * (arm == "treatment")), None)
+            )
+    pre = pd.DataFrame(pre, columns=["customer", "orders", "sessions"]).set_index("customer")
+    plain = analyse_customer_split(_logs(rows), pre, reps=300, cuped=False)
+    adjusted = analyse_customer_split(_logs(rows), pre, reps=300)
+    assert adjusted["hi"] - adjusted["lo"] < 0.9 * (plain["hi"] - plain["lo"])
+    assert adjusted["lo"] < 0.05 < adjusted["hi"]
 
 
 def test_switchback_drops_the_burn_in():

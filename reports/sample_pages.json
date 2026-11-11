@@ -1,0 +1,2540 @@
+{
+  "seed": 11,
+  "minute": "day 15, 19:05",
+  "customers": [
+    {
+      "customer": 5709,
+      "past_orders": 0,
+      "today": [
+        {
+          "kind": "recommended",
+          "cards": [
+            {
+              "id": 156,
+              "name": "Pizzeria 156",
+              "cuisine": "pizza",
+              "eta": 20,
+              "promoted": false,
+              "new": false,
+              "load": 0.0
+            },
+            {
+              "id": 304,
+              "name": "Sushi 304",
+              "cuisine": "sushi",
+              "eta": 17,
+              "promoted": true,
+              "new": false,
+              "load": 0.0
+            },
+            {
+              "id": 137,
+              "name": "Trattoria 137",
+              "cuisine": "italian",
+              "eta": 23,
+              "promoted": false,
+              "new": false,
+              "load": 0.0
+            },
+            {
+              "id": 149,
+              "name": "Sushi 149",
+              "cuisine": "sushi",
+              "eta": 23,
+              "promoted": false,
+              "new": false,
+              "load": 0.0
+            },
+            {
+              "id": 192,
+              "name": "D\u00f6ner 192",
+              "cuisine": "doner",
+              "eta": 19,
+              "promoted": true,
+              "new": false,
+              "load": 0.0
+            },
+            {
+              "id": 253,
+              "name": "Bowl & Co 253",
+              "cuisine": "salad",
+              "eta": 28,
+              "promoted": true,
+              "new": false,
+              "load": 0.0
+            },
+            {
+              "id": 229,
+              "name": "Pizzeria 229",
+              "cuisine": "pizza",
+              "eta": 18,
+              "promoted": true,
+              "new": false,
+              "load": 0.0
+            },
+            {
+              "id": 74,
+              "name": "Thai Kitchen 74",
+              "cuisine": "thai",
+              "eta": 28,
+              "promoted": true,
+              "new": false,
+              "load": 0.0
+            }
+          ]
+        },
+        {
+          "kind": "deals",
+          "cards": [
+            {
+              "id": 304,
+              "name": "Sushi 304",
+              "cuisine": "sushi",
+              "eta": 17,
+              "promoted": true,
+              "new": false,
+              "load": 0.0
+            },
+            {
+              "id": 192,
+              "name": "D\u00f6ner 192",
+              "cuisine": "doner",
+              "eta": 19,
+              "promoted": true,
+              "new": false,
+              "load": 0.0
+            },
+            {
+              "id": 253,
+              "name": "Bowl & Co 253",
+              "cuisine": "salad",
+              "eta": 28,
+              "promoted": true,
+              "new": false,
+              "load": 0.0
+            },
+            {
+              "id": 229,
+              "name": "Pizzeria 229",
+              "cuisine": "pizza",
+              "eta": 18,
+              "promoted": true,
+              "new": false,
+              "load": 0.0
+            },
+            {
+              "id": 74,
+              "name": "Thai Kitchen 74",
+              "cuisine": "thai",
+              "eta": 28,
+              "promoted": true,
+              "new": false,
+              "load": 0.0
+            },
+            {
+              "id": 246,
+              "name": "Trattoria 246",
+              "cuisine": "italian",
+              "eta": 27,
+              "promoted": true,
+              "new": false,
+              "load": 0.0
+            },
+            {
+              "id": 424,
+              "name": "Pizzeria 424",
+              "cuisine": "pizza",
+              "eta": 20,
+              "promoted": true,
+              "new": false,
+              "load": 0.0
+            },
+            {
+              "id": 463,
+              "name": "Pho 463",
+              "cuisine": "vietnamese",
+              "eta": 34,
+              "promoted": true,
+              "new": true,
+              "load": 0.0
+            }
+          ]
+        },
+        {
+          "kind": "fast",
+          "cards": [
+            {
+              "id": 64,
+              "name": "Wok 64",
+              "cuisine": "chinese",
+              "eta": 15,
+              "promoted": false,
+              "new": false,
+              "load": 0.0
+            },
+            {
+              "id": 304,
+              "name": "Sushi 304",
+              "cuisine": "sushi",
+              "eta": 17,
+              "promoted": true,
+              "new": false,
+              "load": 0.0
+            },
+            {
+              "id": 229,
+              "name": "Pizzeria 229",
+              "cuisine": "pizza",
+              "eta": 18,
+              "promoted": true,
+              "new": false,
+              "load": 0.0
+            },
+            {
+              "id": 88,
+              "name": "Wok 88",
+              "cuisine": "chinese",
+              "eta": 18,
+              "promoted": false,
+              "new": false,
+              "load": 0.0
+            },
+            {
+              "id": 192,
+              "name": "D\u00f6ner 192",
+              "cuisine": "doner",
+              "eta": 19,
+              "promoted": true,
+              "new": false,
+              "load": 0.0
+            },
+            {
+              "id": 436,
+              "name": "Pizzeria 436",
+              "cuisine": "pizza",
+              "eta": 19,
+              "promoted": false,
+              "new": false,
+              "load": 0.0
+            },
+            {
+              "id": 292,
+              "name": "Curry House 292",
+              "cuisine": "indian",
+              "eta": 19,
+              "promoted": true,
+              "new": false,
+              "load": 0.0
+            },
+            {
+              "id": 156,
+              "name": "Pizzeria 156",
+              "cuisine": "pizza",
+              "eta": 20,
+              "promoted": false,
+              "new": false,
+              "load": 0.0
+            }
+          ]
+        },
+        {
+          "kind": "new",
+          "cards": [
+            {
+              "id": 111,
+              "name": "D\u00f6ner 111",
+              "cuisine": "doner",
+              "eta": 31,
+              "promoted": false,
+              "new": true,
+              "load": 0.0
+            },
+            {
+              "id": 456,
+              "name": "Burger Bar 456",
+              "cuisine": "burger",
+              "eta": 22,
+              "promoted": false,
+              "new": true,
+              "load": 0.0
+            },
+            {
+              "id": 102,
+              "name": "Burger Bar 102",
+              "cuisine": "burger",
+              "eta": 29,
+              "promoted": false,
+              "new": true,
+              "load": 0.0
+            },
+            {
+              "id": 380,
+              "name": "Trattoria 380",
+              "cuisine": "italian",
+              "eta": 26,
+              "promoted": false,
+              "new": true,
+              "load": 0.0
+            },
+            {
+              "id": 59,
+              "name": "Pizzeria 59",
+              "cuisine": "pizza",
+              "eta": 32,
+              "promoted": false,
+              "new": true,
+              "load": 0.0
+            },
+            {
+              "id": 40,
+              "name": "Gelato 40",
+              "cuisine": "dessert",
+              "eta": 37,
+              "promoted": false,
+              "new": true,
+              "load": 0.0
+            },
+            {
+              "id": 471,
+              "name": "Pizzeria 471",
+              "cuisine": "pizza",
+              "eta": 24,
+              "promoted": false,
+              "new": true,
+              "load": 0.0
+            },
+            {
+              "id": 18,
+              "name": "Burger Bar 18",
+              "cuisine": "burger",
+              "eta": 34,
+              "promoted": false,
+              "new": true,
+              "load": 0.0
+            }
+          ]
+        }
+      ],
+      "assembled": [
+        {
+          "kind": "for_you",
+          "cards": [
+            {
+              "id": 138,
+              "name": "Morning Caf\u00e9 138",
+              "cuisine": "breakfast",
+              "eta": 21,
+              "promoted": false,
+              "new": false,
+              "load": 0.0
+            },
+            {
+              "id": 156,
+              "name": "Pizzeria 156",
+              "cuisine": "pizza",
+              "eta": 20,
+              "promoted": false,
+              "new": false,
+              "load": 0.0
+            },
+            {
+              "id": 229,
+              "name": "Pizzeria 229",
+              "cuisine": "pizza",
+              "eta": 18,
+              "promoted": true,
+              "new": false,
+              "load": 0.0
+            },
+            {
+              "id": 5,
+              "name": "Trattoria 5",
+              "cuisine": "italian",
+              "eta": 21,
+              "promoted": false,
+              "new": false,
+              "load": 0.0
+            },
+            {
+              "id": 64,
+              "name": "Wok 64",
+              "cuisine": "chinese",
+              "eta": 15,
+              "promoted": false,
+              "new": false,
+              "load": 0.0
+            },
+            {
+              "id": 298,
+              "name": "Gelato 298",
+              "cuisine": "dessert",
+              "eta": 23,
+              "promoted": false,
+              "new": false,
+              "load": 0.0
+            },
+            {
+              "id": 175,
+              "name": "Khachapuri 175",
+              "cuisine": "georgian",
+              "eta": 30,
+              "promoted": false,
+              "new": false,
+              "load": 0.0
+            },
+            {
+              "id": 177,
+              "name": "Pizzeria 177",
+              "cuisine": "pizza",
+              "eta": 27,
+              "promoted": false,
+              "new": false,
+              "load": 0.0
+            }
+          ]
+        },
+        {
+          "kind": "fast",
+          "cards": [
+            {
+              "id": 304,
+              "name": "Sushi 304",
+              "cuisine": "sushi",
+              "eta": 17,
+              "promoted": true,
+              "new": false,
+              "load": 0.0
+            },
+            {
+              "id": 311,
+              "name": "Sushi 311",
+              "cuisine": "sushi",
+              "eta": 25,
+              "promoted": false,
+              "new": false,
+              "load": 0.0
+            },
+            {
+              "id": 271,
+              "name": "Trattoria 271",
+              "cuisine": "italian",
+              "eta": 21,
+              "promoted": false,
+              "new": false,
+              "load": 0.0
+            },
+            {
+              "id": 479,
+              "name": "Bowl & Co 479",
+              "cuisine": "salad",
+              "eta": 25,
+              "promoted": false,
+              "new": false,
+              "load": 0.0
+            },
+            {
+              "id": 192,
+              "name": "D\u00f6ner 192",
+              "cuisine": "doner",
+              "eta": 19,
+              "promoted": true,
+              "new": false,
+              "load": 0.0
+            },
+            {
+              "id": 345,
+              "name": "Curry House 345",
+              "cuisine": "indian",
+              "eta": 21,
+              "promoted": false,
+              "new": false,
+              "load": 0.0
+            },
+            {
+              "id": 38,
+              "name": "D\u00f6ner 38",
+              "cuisine": "doner",
+              "eta": 21,
+              "promoted": false,
+              "new": false,
+              "load": 0.0
+            },
+            {
+              "id": 433,
+              "name": "Trattoria 433",
+              "cuisine": "italian",
+              "eta": 21,
+              "promoted": false,
+              "new": false,
+              "load": 0.0
+            }
+          ]
+        },
+        {
+          "kind": "deals",
+          "cards": [
+            {
+              "id": 24,
+              "name": "Thai Kitchen 24",
+              "cuisine": "thai",
+              "eta": 29,
+              "promoted": true,
+              "new": false,
+              "load": 0.0
+            },
+            {
+              "id": 127,
+              "name": "Seoul Grill 127",
+              "cuisine": "korean",
+              "eta": 25,
+              "promoted": true,
+              "new": false,
+              "load": 0.0
+            },
+            {
+              "id": 207,
+              "name": "Trattoria 207",
+              "cuisine": "italian",
+              "eta": 32,
+              "promoted": true,
+              "new": false,
+              "load": 0.0
+            },
+            {
+              "id": 50,
+              "name": "Burger Bar 50",
+              "cuisine": "burger",
+              "eta": 28,
+              "promoted": true,
+              "new": false,
+              "load": 0.0
+            },
+            {
+              "id": 428,
+              "name": "Bowl & Co 428",
+              "cuisine": "salad",
+              "eta": 23,
+              "promoted": true,
+              "new": false,
+              "load": 0.0
+            },
+            {
+              "id": 463,
+              "name": "Pho 463",
+              "cuisine": "vietnamese",
+              "eta": 34,
+              "promoted": true,
+              "new": true,
+              "load": 0.0
+            },
+            {
+              "id": 424,
+              "name": "Pizzeria 424",
+              "cuisine": "pizza",
+              "eta": 20,
+              "promoted": true,
+              "new": false,
+              "load": 0.0
+            },
+            {
+              "id": 132,
+              "name": "D\u00f6ner 132",
+              "cuisine": "doner",
+              "eta": 24,
+              "promoted": true,
+              "new": false,
+              "load": 0.0
+            }
+          ]
+        },
+        {
+          "kind": "new",
+          "cards": [
+            {
+              "id": 456,
+              "name": "Burger Bar 456",
+              "cuisine": "burger",
+              "eta": 22,
+              "promoted": false,
+              "new": true,
+              "load": 0.0
+            },
+            {
+              "id": 380,
+              "name": "Trattoria 380",
+              "cuisine": "italian",
+              "eta": 26,
+              "promoted": false,
+              "new": true,
+              "load": 0.0
+            },
+            {
+              "id": 102,
+              "name": "Burger Bar 102",
+              "cuisine": "burger",
+              "eta": 29,
+              "promoted": false,
+              "new": true,
+              "load": 0.0
+            },
+            {
+              "id": 355,
+              "name": "Trattoria 355",
+              "cuisine": "italian",
+              "eta": 22,
+              "promoted": false,
+              "new": true,
+              "load": 0.0
+            },
+            {
+              "id": 411,
+              "name": "Pizzeria 411",
+              "cuisine": "pizza",
+              "eta": 33,
+              "promoted": false,
+              "new": true,
+              "load": 0.0
+            },
+            {
+              "id": 111,
+              "name": "D\u00f6ner 111",
+              "cuisine": "doner",
+              "eta": 31,
+              "promoted": false,
+              "new": true,
+              "load": 0.0
+            },
+            {
+              "id": 382,
+              "name": "Pho 382",
+              "cuisine": "vietnamese",
+              "eta": 26,
+              "promoted": false,
+              "new": true,
+              "load": 0.0
+            },
+            {
+              "id": 59,
+              "name": "Pizzeria 59",
+              "cuisine": "pizza",
+              "eta": 32,
+              "promoted": false,
+              "new": true,
+              "load": 0.0
+            }
+          ]
+        },
+        {
+          "kind": "cuisine:burger",
+          "cards": [
+            {
+              "id": 73,
+              "name": "Burger Bar 73",
+              "cuisine": "burger",
+              "eta": 35,
+              "promoted": false,
+              "new": false,
+              "load": 0.0
+            },
+            {
+              "id": 389,
+              "name": "Burger Bar 389",
+              "cuisine": "burger",
+              "eta": 31,
+              "promoted": false,
+              "new": false,
+              "load": 0.0
+            },
+            {
+              "id": 441,
+              "name": "Burger Bar 441",
+              "cuisine": "burger",
+              "eta": 32,
+              "promoted": false,
+              "new": false,
+              "load": 0.0
+            },
+            {
+              "id": 476,
+              "name": "Burger Bar 476",
+              "cuisine": "burger",
+              "eta": 25,
+              "promoted": false,
+              "new": false,
+              "load": 0.0
+            },
+            {
+              "id": 159,
+              "name": "Burger Bar 159",
+              "cuisine": "burger",
+              "eta": 34,
+              "promoted": false,
+              "new": false,
+              "load": 0.0
+            },
+            {
+              "id": 414,
+              "name": "Burger Bar 414",
+              "cuisine": "burger",
+              "eta": 30,
+              "promoted": false,
+              "new": false,
+              "load": 0.0
+            },
+            {
+              "id": 358,
+              "name": "Burger Bar 358",
+              "cuisine": "burger",
+              "eta": 27,
+              "promoted": false,
+              "new": false,
+              "load": 0.0
+            },
+            {
+              "id": 92,
+              "name": "Burger Bar 92",
+              "cuisine": "burger",
+              "eta": 32,
+              "promoted": false,
+              "new": false,
+              "load": 0.0
+            }
+          ]
+        },
+        {
+          "kind": "cuisine:italian",
+          "cards": [
+            {
+              "id": 121,
+              "name": "Trattoria 121",
+              "cuisine": "italian",
+              "eta": 22,
+              "promoted": false,
+              "new": false,
+              "load": 0.0
+            },
+            {
+              "id": 137,
+              "name": "Trattoria 137",
+              "cuisine": "italian",
+              "eta": 23,
+              "promoted": false,
+              "new": false,
+              "load": 0.0
+            },
+            {
+              "id": 349,
+              "name": "Trattoria 349",
+              "cuisine": "italian",
+              "eta": 27,
+              "promoted": false,
+              "new": false,
+              "load": 0.0
+            },
+            {
+              "id": 142,
+              "name": "Trattoria 142",
+              "cuisine": "italian",
+              "eta": 23,
+              "promoted": false,
+              "new": false,
+              "load": 0.0
+            },
+            {
+              "id": 126,
+              "name": "Trattoria 126",
+              "cuisine": "italian",
+              "eta": 23,
+              "promoted": false,
+              "new": false,
+              "load": 0.0
+            },
+            {
+              "id": 361,
+              "name": "Trattoria 361",
+              "cuisine": "italian",
+              "eta": 24,
+              "promoted": false,
+              "new": false,
+              "load": 0.0
+            },
+            {
+              "id": 16,
+              "name": "Trattoria 16",
+              "cuisine": "italian",
+              "eta": 26,
+              "promoted": false,
+              "new": false,
+              "load": 0.0
+            },
+            {
+              "id": 423,
+              "name": "Trattoria 423",
+              "cuisine": "italian",
+              "eta": 30,
+              "promoted": false,
+              "new": false,
+              "load": 0.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "customer": 6112,
+      "past_orders": 3,
+      "today": [
+        {
+          "kind": "order_again",
+          "cards": [
+            {
+              "id": 51,
+              "name": "Seoul Grill 51",
+              "cuisine": "korean",
+              "eta": 19,
+              "promoted": false,
+              "new": false,
+              "load": 0.0
+            },
+            {
+              "id": 166,
+              "name": "Mini Market 166",
+              "cuisine": "grocery",
+              "eta": 19,
+              "promoted": false,
+              "new": false,
+              "load": 0.0
+            },
+            {
+              "id": 463,
+              "name": "Pho 463",
+              "cuisine": "vietnamese",
+              "eta": 33,
+              "promoted": true,
+              "new": true,
+              "load": 0.0
+            }
+          ]
+        },
+        {
+          "kind": "recommended",
+          "cards": [
+            {
+              "id": 166,
+              "name": "Mini Market 166",
+              "cuisine": "grocery",
+              "eta": 19,
+              "promoted": false,
+              "new": false,
+              "load": 0.0
+            },
+            {
+              "id": 156,
+              "name": "Pizzeria 156",
+              "cuisine": "pizza",
+              "eta": 28,
+              "promoted": false,
+              "new": false,
+              "load": 0.0
+            },
+            {
+              "id": 137,
+              "name": "Trattoria 137",
+              "cuisine": "italian",
+              "eta": 24,
+              "promoted": false,
+              "new": false,
+              "load": 0.0
+            },
+            {
+              "id": 304,
+              "name": "Sushi 304",
+              "cuisine": "sushi",
+              "eta": 26,
+              "promoted": true,
+              "new": false,
+              "load": 0.0
+            },
+            {
+              "id": 253,
+              "name": "Bowl & Co 253",
+              "cuisine": "salad",
+              "eta": 26,
+              "promoted": true,
+              "new": false,
+              "load": 0.0
+            },
+            {
+              "id": 74,
+              "name": "Thai Kitchen 74",
+              "cuisine": "thai",
+              "eta": 24,
+              "promoted": true,
+              "new": false,
+              "load": 0.0
+            },
+            {
+              "id": 169,
+              "name": "Pizzeria 169",
+              "cuisine": "pizza",
+              "eta": 21,
+              "promoted": false,
+              "new": false,
+              "load": 0.0
+            },
+            {
+              "id": 143,
+              "name": "Sushi 143",
+              "cuisine": "sushi",
+              "eta": 27,
+              "promoted": true,
+              "new": false,
+              "load": 0.0
+            }
+          ]
+        },
+        {
+          "kind": "deals",
+          "cards": [
+            {
+              "id": 304,
+              "name": "Sushi 304",
+              "cuisine": "sushi",
+              "eta": 26,
+              "promoted": true,
+              "new": false,
+              "load": 0.0
+            },
+            {
+              "id": 253,
+              "name": "Bowl & Co 253",
+              "cuisine": "salad",
+              "eta": 26,
+              "promoted": true,
+              "new": false,
+              "load": 0.0
+            },
+            {
+              "id": 74,
+              "name": "Thai Kitchen 74",
+              "cuisine": "thai",
+              "eta": 24,
+              "promoted": true,
+              "new": false,
+              "load": 0.0
+            },
+            {
+              "id": 143,
+              "name": "Sushi 143",
+              "cuisine": "sushi",
+              "eta": 27,
+              "promoted": true,
+              "new": false,
+              "load": 0.0
+            },
+            {
+              "id": 463,
+              "name": "Pho 463",
+              "cuisine": "vietnamese",
+              "eta": 33,
+              "promoted": true,
+              "new": true,
+              "load": 0.0
+            },
+            {
+              "id": 424,
+              "name": "Pizzeria 424",
+              "cuisine": "pizza",
+              "eta": 29,
+              "promoted": true,
+              "new": false,
+              "load": 0.0
+            },
+            {
+              "id": 147,
+              "name": "Mini Market 147",
+              "cuisine": "grocery",
+              "eta": 27,
+              "promoted": true,
+              "new": false,
+              "load": 0.0
+            },
+            {
+              "id": 408,
+              "name": "Taqueria 408",
+              "cuisine": "mexican",
+              "eta": 16,
+              "promoted": true,
+              "new": false,
+              "load": 0.0
+            }
+          ]
+        },
+        {
+          "kind": "fast",
+          "cards": [
+            {
+              "id": 408,
+              "name": "Taqueria 408",
+              "cuisine": "mexican",
+              "eta": 16,
+              "promoted": true,
+              "new": false,
+              "load": 0.0
+            },
+            {
+              "id": 251,
+              "name": "D\u00f6ner 251",
+              "cuisine": "doner",
+              "eta": 17,
+              "promoted": false,
+              "new": false,
+              "load": 0.0
+            },
+            {
+              "id": 58,
+              "name": "Pho 58",
+              "cuisine": "vietnamese",
+              "eta": 17,
+              "promoted": false,
+              "new": false,
+              "load": 0.0
+            },
+            {
+              "id": 176,
+              "name": "Pho 176",
+              "cuisine": "vietnamese",
+              "eta": 18,
+              "promoted": false,
+              "new": false,
+              "load": 0.0
+            },
+            {
+              "id": 35,
+              "name": "Bowl & Co 35",
+              "cuisine": "salad",
+              "eta": 18,
+              "promoted": false,
+              "new": false,
+              "load": 0.0
+            },
+            {
+              "id": 65,
+              "name": "Morning Caf\u00e9 65",
+              "cuisine": "breakfast",
+              "eta": 18,
+              "promoted": false,
+              "new": false,
+              "load": 0.0
+            },
+            {
+              "id": 400,
+              "name": "Bowl & Co 400",
+              "cuisine": "salad",
+              "eta": 18,
+              "promoted": false,
+              "new": false,
+              "load": 0.0
+            },
+            {
+              "id": 166,
+              "name": "Mini Market 166",
+              "cuisine": "grocery",
+              "eta": 19,
+              "promoted": false,
+              "new": false,
+              "load": 0.0
+            }
+          ]
+        },
+        {
+          "kind": "new",
+          "cards": [
+            {
+              "id": 93,
+              "name": "Curry House 93",
+              "cuisine": "indian",
+              "eta": 37,
+              "promoted": false,
+              "new": true,
+              "load": 0.0
+            },
+            {
+              "id": 111,
+              "name": "D\u00f6ner 111",
+              "cuisine": "doner",
+              "eta": 30,
+              "promoted": false,
+              "new": true,
+              "load": 0.0
+            },
+            {
+              "id": 59,
+              "name": "Pizzeria 59",
+              "cuisine": "pizza",
+              "eta": 34,
+              "promoted": false,
+              "new": true,
+              "load": 0.0
+            },
+            {
+              "id": 47,
+              "name": "Thai Kitchen 47",
+              "cuisine": "thai",
+              "eta": 38,
+              "promoted": false,
+              "new": true,
+              "load": 0.0
+            },
+            {
+              "id": 355,
+              "name": "Trattoria 355",
+              "cuisine": "italian",
+              "eta": 26,
+              "promoted": false,
+              "new": true,
+              "load": 0.0
+            },
+            {
+              "id": 160,
+              "name": "Burger Bar 160",
+              "cuisine": "burger",
+              "eta": 36,
+              "promoted": false,
+              "new": true,
+              "load": 0.0
+            },
+            {
+              "id": 472,
+              "name": "Curry House 472",
+              "cuisine": "indian",
+              "eta": 30,
+              "promoted": false,
+              "new": true,
+              "load": 0.0
+            },
+            {
+              "id": 463,
+              "name": "Pho 463",
+              "cuisine": "vietnamese",
+              "eta": 33,
+              "promoted": true,
+              "new": true,
+              "load": 0.0
+            }
+          ]
+        },
+        {
+          "kind": "cuisine:vietnamese",
+          "cards": [
+            {
+              "id": 463,
+              "name": "Pho 463",
+              "cuisine": "vietnamese",
+              "eta": 33,
+              "promoted": true,
+              "new": true,
+              "load": 0.0
+            },
+            {
+              "id": 58,
+              "name": "Pho 58",
+              "cuisine": "vietnamese",
+              "eta": 17,
+              "promoted": false,
+              "new": false,
+              "load": 0.0
+            },
+            {
+              "id": 176,
+              "name": "Pho 176",
+              "cuisine": "vietnamese",
+              "eta": 18,
+              "promoted": false,
+              "new": false,
+              "load": 0.0
+            },
+            {
+              "id": 300,
+              "name": "Pho 300",
+              "cuisine": "vietnamese",
+              "eta": 31,
+              "promoted": false,
+              "new": false,
+              "load": 0.0
+            },
+            {
+              "id": 154,
+              "name": "Pho 154",
+              "cuisine": "vietnamese",
+              "eta": 30,
+              "promoted": false,
+              "new": false,
+              "load": 0.0
+            },
+            {
+              "id": 124,
+              "name": "Pho 124",
+              "cuisine": "vietnamese",
+              "eta": 29,
+              "promoted": true,
+              "new": false,
+              "load": 0.0
+            },
+            {
+              "id": 257,
+              "name": "Pho 257",
+              "cuisine": "vietnamese",
+              "eta": 28,
+              "promoted": false,
+              "new": false,
+              "load": 0.0
+            },
+            {
+              "id": 406,
+              "name": "Pho 406",
+              "cuisine": "vietnamese",
+              "eta": 24,
+              "promoted": false,
+              "new": false,
+              "load": 0.0
+            }
+          ]
+        }
+      ],
+      "assembled": [
+        {
+          "kind": "for_you",
+          "cards": [
+            {
+              "id": 366,
+              "name": "D\u00f6ner 366",
+              "cuisine": "doner",
+              "eta": 26,
+              "promoted": false,
+              "new": false,
+              "load": 0.0
+            },
+            {
+              "id": 446,
+              "name": "Burger Bar 446",
+              "cuisine": "burger",
+              "eta": 25,
+              "promoted": false,
+              "new": false,
+              "load": 0.0
+            },
+            {
+              "id": 217,
+              "name": "Pizzeria 217",
+              "cuisine": "pizza",
+              "eta": 23,
+              "promoted": false,
+              "new": false,
+              "load": 0.0
+            },
+            {
+              "id": 166,
+              "name": "Mini Market 166",
+              "cuisine": "grocery",
+              "eta": 19,
+              "promoted": false,
+              "new": false,
+              "load": 0.0
+            },
+            {
+              "id": 389,
+              "name": "Burger Bar 389",
+              "cuisine": "burger",
+              "eta": 23,
+              "promoted": false,
+              "new": false,
+              "load": 0.0
+            },
+            {
+              "id": 73,
+              "name": "Burger Bar 73",
+              "cuisine": "burger",
+              "eta": 30,
+              "promoted": false,
+              "new": false,
+              "load": 0.0
+            },
+            {
+              "id": 4,
+              "name": "Sushi 4",
+              "cuisine": "sushi",
+              "eta": 20,
+              "promoted": false,
+              "new": false,
+              "load": 0.0
+            },
+            {
+              "id": 62,
+              "name": "Sushi 62",
+              "cuisine": "sushi",
+              "eta": 29,
+              "promoted": false,
+              "new": false,
+              "load": 0.0
+            }
+          ]
+        },
+        {
+          "kind": "fast",
+          "cards": [
+            {
+              "id": 330,
+              "name": "Seoul Grill 330",
+              "cuisine": "korean",
+              "eta": 24,
+              "promoted": false,
+              "new": false,
+              "load": 0.0
+            },
+            {
+              "id": 136,
+              "name": "Curry House 136",
+              "cuisine": "indian",
+              "eta": 21,
+              "promoted": false,
+              "new": false,
+              "load": 0.0
+            },
+            {
+              "id": 50,
+              "name": "Burger Bar 50",
+              "cuisine": "burger",
+              "eta": 33,
+              "promoted": true,
+              "new": false,
+              "load": 0.0
+            },
+            {
+              "id": 304,
+              "name": "Sushi 304",
+              "cuisine": "sushi",
+              "eta": 26,
+              "promoted": true,
+              "new": false,
+              "load": 0.0
+            },
+            {
+              "id": 58,
+              "name": "Pho 58",
+              "cuisine": "vietnamese",
+              "eta": 17,
+              "promoted": false,
+              "new": false,
+              "load": 0.0
+            },
+            {
+              "id": 176,
+              "name": "Pho 176",
+              "cuisine": "vietnamese",
+              "eta": 18,
+              "promoted": false,
+              "new": false,
+              "load": 0.0
+            },
+            {
+              "id": 419,
+              "name": "Burger Bar 419",
+              "cuisine": "burger",
+              "eta": 22,
+              "promoted": false,
+              "new": false,
+              "load": 0.0
+            },
+            {
+              "id": 232,
+              "name": "Curry House 232",
+              "cuisine": "indian",
+              "eta": 24,
+              "promoted": false,
+              "new": false,
+              "load": 0.0
+            }
+          ]
+        },
+        {
+          "kind": "cuisine:pizza",
+          "cards": [
+            {
+              "id": 258,
+              "name": "Pizzeria 258",
+              "cuisine": "pizza",
+              "eta": 29,
+              "promoted": false,
+              "new": false,
+              "load": 0.0
+            },
+            {
+              "id": 169,
+              "name": "Pizzeria 169",
+              "cuisine": "pizza",
+              "eta": 21,
+              "promoted": false,
+              "new": false,
+              "load": 0.0
+            },
+            {
+              "id": 296,
+              "name": "Pizzeria 296",
+              "cuisine": "pizza",
+              "eta": 35,
+              "promoted": false,
+              "new": false,
+              "load": 0.0
+            },
+            {
+              "id": 177,
+              "name": "Pizzeria 177",
+              "cuisine": "pizza",
+              "eta": 34,
+              "promoted": false,
+              "new": false,
+              "load": 0.0
+            },
+            {
+              "id": 156,
+              "name": "Pizzeria 156",
+              "cuisine": "pizza",
+              "eta": 28,
+              "promoted": false,
+              "new": false,
+              "load": 0.0
+            },
+            {
+              "id": 23,
+              "name": "Pizzeria 23",
+              "cuisine": "pizza",
+              "eta": 36,
+              "promoted": false,
+              "new": false,
+              "load": 0.0
+            },
+            {
+              "id": 310,
+              "name": "Pizzeria 310",
+              "cuisine": "pizza",
+              "eta": 28,
+              "promoted": false,
+              "new": false,
+              "load": 0.0
+            },
+            {
+              "id": 96,
+              "name": "Pizzeria 96",
+              "cuisine": "pizza",
+              "eta": 30,
+              "promoted": false,
+              "new": false,
+              "load": 0.0
+            }
+          ]
+        },
+        {
+          "kind": "new",
+          "cards": [
+            {
+              "id": 472,
+              "name": "Curry House 472",
+              "cuisine": "indian",
+              "eta": 30,
+              "promoted": false,
+              "new": true,
+              "load": 0.0
+            },
+            {
+              "id": 411,
+              "name": "Pizzeria 411",
+              "cuisine": "pizza",
+              "eta": 33,
+              "promoted": false,
+              "new": true,
+              "load": 0.0
+            },
+            {
+              "id": 111,
+              "name": "D\u00f6ner 111",
+              "cuisine": "doner",
+              "eta": 30,
+              "promoted": false,
+              "new": true,
+              "load": 0.0
+            },
+            {
+              "id": 355,
+              "name": "Trattoria 355",
+              "cuisine": "italian",
+              "eta": 26,
+              "promoted": false,
+              "new": true,
+              "load": 0.0
+            },
+            {
+              "id": 93,
+              "name": "Curry House 93",
+              "cuisine": "indian",
+              "eta": 37,
+              "promoted": false,
+              "new": true,
+              "load": 0.0
+            },
+            {
+              "id": 59,
+              "name": "Pizzeria 59",
+              "cuisine": "pizza",
+              "eta": 34,
+              "promoted": false,
+              "new": true,
+              "load": 0.0
+            },
+            {
+              "id": 47,
+              "name": "Thai Kitchen 47",
+              "cuisine": "thai",
+              "eta": 38,
+              "promoted": false,
+              "new": true,
+              "load": 0.0
+            }
+          ]
+        },
+        {
+          "kind": "cuisine:italian",
+          "cards": [
+            {
+              "id": 410,
+              "name": "Trattoria 410",
+              "cuisine": "italian",
+              "eta": 28,
+              "promoted": false,
+              "new": false,
+              "load": 0.0
+            },
+            {
+              "id": 5,
+              "name": "Trattoria 5",
+              "cuisine": "italian",
+              "eta": 30,
+              "promoted": false,
+              "new": false,
+              "load": 0.0
+            },
+            {
+              "id": 137,
+              "name": "Trattoria 137",
+              "cuisine": "italian",
+              "eta": 24,
+              "promoted": false,
+              "new": false,
+              "load": 0.0
+            },
+            {
+              "id": 294,
+              "name": "Trattoria 294",
+              "cuisine": "italian",
+              "eta": 27,
+              "promoted": true,
+              "new": false,
+              "load": 0.0
+            },
+            {
+              "id": 121,
+              "name": "Trattoria 121",
+              "cuisine": "italian",
+              "eta": 25,
+              "promoted": false,
+              "new": false,
+              "load": 0.0
+            },
+            {
+              "id": 433,
+              "name": "Trattoria 433",
+              "cuisine": "italian",
+              "eta": 28,
+              "promoted": false,
+              "new": false,
+              "load": 0.0
+            },
+            {
+              "id": 350,
+              "name": "Trattoria 350",
+              "cuisine": "italian",
+              "eta": 31,
+              "promoted": false,
+              "new": false,
+              "load": 0.0
+            },
+            {
+              "id": 142,
+              "name": "Trattoria 142",
+              "cuisine": "italian",
+              "eta": 27,
+              "promoted": false,
+              "new": false,
+              "load": 0.0
+            }
+          ]
+        },
+        {
+          "kind": "cuisine:burger",
+          "cards": [
+            {
+              "id": 414,
+              "name": "Burger Bar 414",
+              "cuisine": "burger",
+              "eta": 26,
+              "promoted": false,
+              "new": false,
+              "load": 0.0
+            },
+            {
+              "id": 358,
+              "name": "Burger Bar 358",
+              "cuisine": "burger",
+              "eta": 28,
+              "promoted": false,
+              "new": false,
+              "load": 0.0
+            },
+            {
+              "id": 464,
+              "name": "Burger Bar 464",
+              "cuisine": "burger",
+              "eta": 35,
+              "promoted": false,
+              "new": false,
+              "load": 0.0
+            },
+            {
+              "id": 171,
+              "name": "Burger Bar 171",
+              "cuisine": "burger",
+              "eta": 27,
+              "promoted": false,
+              "new": false,
+              "load": 0.0
+            },
+            {
+              "id": 384,
+              "name": "Burger Bar 384",
+              "cuisine": "burger",
+              "eta": 31,
+              "promoted": false,
+              "new": false,
+              "load": 0.0
+            },
+            {
+              "id": 160,
+              "name": "Burger Bar 160",
+              "cuisine": "burger",
+              "eta": 36,
+              "promoted": false,
+              "new": true,
+              "load": 0.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "customer": 7917,
+      "past_orders": 8,
+      "today": [
+        {
+          "kind": "order_again",
+          "cards": [
+            {
+              "id": 372,
+              "name": "Mini Market 372",
+              "cuisine": "grocery",
+              "eta": 15,
+              "promoted": false,
+              "new": false,
+              "load": 0.0
+            },
+            {
+              "id": 416,
+              "name": "Trattoria 416",
+              "cuisine": "italian",
+              "eta": 16,
+              "promoted": false,
+              "new": false,
+              "load": 0.0
+            },
+            {
+              "id": 172,
+              "name": "Pho 172",
+              "cuisine": "vietnamese",
+              "eta": 17,
+              "promoted": false,
+              "new": false,
+              "load": 0.0
+            },
+            {
+              "id": 369,
+              "name": "Pizzeria 369",
+              "cuisine": "pizza",
+              "eta": 27,
+              "promoted": false,
+              "new": false,
+              "load": 0.0
+            },
+            {
+              "id": 409,
+              "name": "Trattoria 409",
+              "cuisine": "italian",
+              "eta": 25,
+              "promoted": false,
+              "new": false,
+              "load": 0.0
+            }
+          ]
+        },
+        {
+          "kind": "recommended",
+          "cards": [
+            {
+              "id": 416,
+              "name": "Trattoria 416",
+              "cuisine": "italian",
+              "eta": 16,
+              "promoted": false,
+              "new": false,
+              "load": 0.0
+            },
+            {
+              "id": 168,
+              "name": "Sushi 168",
+              "cuisine": "sushi",
+              "eta": 20,
+              "promoted": true,
+              "new": false,
+              "load": 0.0
+            },
+            {
+              "id": 372,
+              "name": "Mini Market 372",
+              "cuisine": "grocery",
+              "eta": 15,
+              "promoted": false,
+              "new": false,
+              "load": 0.0
+            },
+            {
+              "id": 158,
+              "name": "Trattoria 158",
+              "cuisine": "italian",
+              "eta": 24,
+              "promoted": false,
+              "new": false,
+              "load": 0.0
+            },
+            {
+              "id": 137,
+              "name": "Trattoria 137",
+              "cuisine": "italian",
+              "eta": 25,
+              "promoted": false,
+              "new": false,
+              "load": 0.0
+            },
+            {
+              "id": 96,
+              "name": "Pizzeria 96",
+              "cuisine": "pizza",
+              "eta": 23,
+              "promoted": false,
+              "new": false,
+              "load": 0.0
+            },
+            {
+              "id": 166,
+              "name": "Mini Market 166",
+              "cuisine": "grocery",
+              "eta": 26,
+              "promoted": false,
+              "new": false,
+              "load": 0.0
+            },
+            {
+              "id": 253,
+              "name": "Bowl & Co 253",
+              "cuisine": "salad",
+              "eta": 23,
+              "promoted": true,
+              "new": false,
+              "load": 0.0
+            }
+          ]
+        },
+        {
+          "kind": "deals",
+          "cards": [
+            {
+              "id": 168,
+              "name": "Sushi 168",
+              "cuisine": "sushi",
+              "eta": 20,
+              "promoted": true,
+              "new": false,
+              "load": 0.0
+            },
+            {
+              "id": 253,
+              "name": "Bowl & Co 253",
+              "cuisine": "salad",
+              "eta": 23,
+              "promoted": true,
+              "new": false,
+              "load": 0.0
+            },
+            {
+              "id": 143,
+              "name": "Sushi 143",
+              "cuisine": "sushi",
+              "eta": 19,
+              "promoted": true,
+              "new": false,
+              "load": 0.0
+            },
+            {
+              "id": 246,
+              "name": "Trattoria 246",
+              "cuisine": "italian",
+              "eta": 29,
+              "promoted": true,
+              "new": false,
+              "load": 0.0
+            },
+            {
+              "id": 74,
+              "name": "Thai Kitchen 74",
+              "cuisine": "thai",
+              "eta": 26,
+              "promoted": true,
+              "new": false,
+              "load": 0.0
+            },
+            {
+              "id": 262,
+              "name": "D\u00f6ner 262",
+              "cuisine": "doner",
+              "eta": 29,
+              "promoted": true,
+              "new": false,
+              "load": 0.0
+            },
+            {
+              "id": 147,
+              "name": "Mini Market 147",
+              "cuisine": "grocery",
+              "eta": 18,
+              "promoted": true,
+              "new": false,
+              "load": 0.0
+            },
+            {
+              "id": 375,
+              "name": "Thai Kitchen 375",
+              "cuisine": "thai",
+              "eta": 19,
+              "promoted": true,
+              "new": false,
+              "load": 0.0
+            }
+          ]
+        },
+        {
+          "kind": "fast",
+          "cards": [
+            {
+              "id": 372,
+              "name": "Mini Market 372",
+              "cuisine": "grocery",
+              "eta": 15,
+              "promoted": false,
+              "new": false,
+              "load": 0.0
+            },
+            {
+              "id": 328,
+              "name": "Trattoria 328",
+              "cuisine": "italian",
+              "eta": 16,
+              "promoted": false,
+              "new": false,
+              "load": 0.0
+            },
+            {
+              "id": 278,
+              "name": "Sushi 278",
+              "cuisine": "sushi",
+              "eta": 16,
+              "promoted": false,
+              "new": false,
+              "load": 0.0
+            },
+            {
+              "id": 416,
+              "name": "Trattoria 416",
+              "cuisine": "italian",
+              "eta": 16,
+              "promoted": false,
+              "new": false,
+              "load": 0.0
+            },
+            {
+              "id": 172,
+              "name": "Pho 172",
+              "cuisine": "vietnamese",
+              "eta": 17,
+              "promoted": false,
+              "new": false,
+              "load": 0.0
+            },
+            {
+              "id": 326,
+              "name": "Burger Bar 326",
+              "cuisine": "burger",
+              "eta": 17,
+              "promoted": false,
+              "new": false,
+              "load": 0.0
+            },
+            {
+              "id": 48,
+              "name": "Burger Bar 48",
+              "cuisine": "burger",
+              "eta": 17,
+              "promoted": false,
+              "new": false,
+              "load": 0.0
+            },
+            {
+              "id": 75,
+              "name": "Sushi 75",
+              "cuisine": "sushi",
+              "eta": 17,
+              "promoted": false,
+              "new": false,
+              "load": 0.0
+            }
+          ]
+        },
+        {
+          "kind": "new",
+          "cards": [
+            {
+              "id": 93,
+              "name": "Curry House 93",
+              "cuisine": "indian",
+              "eta": 30,
+              "promoted": false,
+              "new": true,
+              "load": 0.0
+            },
+            {
+              "id": 111,
+              "name": "D\u00f6ner 111",
+              "cuisine": "doner",
+              "eta": 24,
+              "promoted": false,
+              "new": true,
+              "load": 0.0
+            },
+            {
+              "id": 334,
+              "name": "Seoul Grill 334",
+              "cuisine": "korean",
+              "eta": 20,
+              "promoted": false,
+              "new": true,
+              "load": 0.0
+            },
+            {
+              "id": 69,
+              "name": "Taqueria 69",
+              "cuisine": "mexican",
+              "eta": 28,
+              "promoted": false,
+              "new": true,
+              "load": 0.0
+            },
+            {
+              "id": 118,
+              "name": "Khachapuri 118",
+              "cuisine": "georgian",
+              "eta": 23,
+              "promoted": false,
+              "new": true,
+              "load": 0.0
+            },
+            {
+              "id": 102,
+              "name": "Burger Bar 102",
+              "cuisine": "burger",
+              "eta": 23,
+              "promoted": false,
+              "new": true,
+              "load": 0.0
+            },
+            {
+              "id": 59,
+              "name": "Pizzeria 59",
+              "cuisine": "pizza",
+              "eta": 32,
+              "promoted": false,
+              "new": true,
+              "load": 0.0
+            },
+            {
+              "id": 40,
+              "name": "Gelato 40",
+              "cuisine": "dessert",
+              "eta": 35,
+              "promoted": false,
+              "new": true,
+              "load": 0.0
+            }
+          ]
+        },
+        {
+          "kind": "cuisine:italian",
+          "cards": [
+            {
+              "id": 416,
+              "name": "Trattoria 416",
+              "cuisine": "italian",
+              "eta": 16,
+              "promoted": false,
+              "new": false,
+              "load": 0.0
+            },
+            {
+              "id": 158,
+              "name": "Trattoria 158",
+              "cuisine": "italian",
+              "eta": 24,
+              "promoted": false,
+              "new": false,
+              "load": 0.0
+            },
+            {
+              "id": 137,
+              "name": "Trattoria 137",
+              "cuisine": "italian",
+              "eta": 25,
+              "promoted": false,
+              "new": false,
+              "load": 0.0
+            },
+            {
+              "id": 246,
+              "name": "Trattoria 246",
+              "cuisine": "italian",
+              "eta": 29,
+              "promoted": true,
+              "new": false,
+              "load": 0.0
+            },
+            {
+              "id": 442,
+              "name": "Trattoria 442",
+              "cuisine": "italian",
+              "eta": 18,
+              "promoted": false,
+              "new": false,
+              "load": 0.0
+            },
+            {
+              "id": 355,
+              "name": "Trattoria 355",
+              "cuisine": "italian",
+              "eta": 25,
+              "promoted": false,
+              "new": true,
+              "load": 0.0
+            },
+            {
+              "id": 142,
+              "name": "Trattoria 142",
+              "cuisine": "italian",
+              "eta": 26,
+              "promoted": false,
+              "new": false,
+              "load": 0.0
+            },
+            {
+              "id": 178,
+              "name": "Trattoria 178",
+              "cuisine": "italian",
+              "eta": 19,
+              "promoted": false,
+              "new": false,
+              "load": 0.0
+            }
+          ]
+        }
+      ],
+      "assembled": [
+        {
+          "kind": "for_you",
+          "cards": [
+            {
+              "id": 344,
+              "name": "Burger Bar 344",
+              "cuisine": "burger",
+              "eta": 24,
+              "promoted": false,
+              "new": false,
+              "load": 0.0
+            },
+            {
+              "id": 416,
+              "name": "Trattoria 416",
+              "cuisine": "italian",
+              "eta": 16,
+              "promoted": false,
+              "new": false,
+              "load": 0.0
+            },
+            {
+              "id": 172,
+              "name": "Pho 172",
+              "cuisine": "vietnamese",
+              "eta": 17,
+              "promoted": false,
+              "new": false,
+              "load": 0.0
+            },
+            {
+              "id": 168,
+              "name": "Sushi 168",
+              "cuisine": "sushi",
+              "eta": 20,
+              "promoted": true,
+              "new": false,
+              "load": 0.0
+            },
+            {
+              "id": 410,
+              "name": "Trattoria 410",
+              "cuisine": "italian",
+              "eta": 20,
+              "promoted": false,
+              "new": false,
+              "load": 0.0
+            },
+            {
+              "id": 278,
+              "name": "Sushi 278",
+              "cuisine": "sushi",
+              "eta": 16,
+              "promoted": false,
+              "new": false,
+              "load": 0.0
+            },
+            {
+              "id": 153,
+              "name": "D\u00f6ner 153",
+              "cuisine": "doner",
+              "eta": 21,
+              "promoted": false,
+              "new": false,
+              "load": 0.0
+            },
+            {
+              "id": 409,
+              "name": "Trattoria 409",
+              "cuisine": "italian",
+              "eta": 25,
+              "promoted": false,
+              "new": false,
+              "load": 0.0
+            }
+          ]
+        },
+        {
+          "kind": "fast",
+          "cards": [
+            {
+              "id": 194,
+              "name": "Burger Bar 194",
+              "cuisine": "burger",
+              "eta": 22,
+              "promoted": false,
+              "new": false,
+              "load": 0.0
+            },
+            {
+              "id": 195,
+              "name": "Mini Market 195",
+              "cuisine": "grocery",
+              "eta": 21,
+              "promoted": false,
+              "new": false,
+              "load": 0.0
+            },
+            {
+              "id": 143,
+              "name": "Sushi 143",
+              "cuisine": "sushi",
+              "eta": 19,
+              "promoted": true,
+              "new": false,
+              "load": 0.0
+            },
+            {
+              "id": 372,
+              "name": "Mini Market 372",
+              "cuisine": "grocery",
+              "eta": 15,
+              "promoted": false,
+              "new": false,
+              "load": 0.0
+            },
+            {
+              "id": 62,
+              "name": "Sushi 62",
+              "cuisine": "sushi",
+              "eta": 21,
+              "promoted": false,
+              "new": false,
+              "load": 0.0
+            },
+            {
+              "id": 112,
+              "name": "D\u00f6ner 112",
+              "cuisine": "doner",
+              "eta": 24,
+              "promoted": false,
+              "new": false,
+              "load": 0.0
+            },
+            {
+              "id": 75,
+              "name": "Sushi 75",
+              "cuisine": "sushi",
+              "eta": 17,
+              "promoted": false,
+              "new": false,
+              "load": 0.0
+            },
+            {
+              "id": 70,
+              "name": "Burger Bar 70",
+              "cuisine": "burger",
+              "eta": 22,
+              "promoted": false,
+              "new": false,
+              "load": 0.0
+            }
+          ]
+        },
+        {
+          "kind": "cuisine:burger",
+          "cards": [
+            {
+              "id": 419,
+              "name": "Burger Bar 419",
+              "cuisine": "burger",
+              "eta": 27,
+              "promoted": false,
+              "new": false,
+              "load": 0.0
+            },
+            {
+              "id": 446,
+              "name": "Burger Bar 446",
+              "cuisine": "burger",
+              "eta": 29,
+              "promoted": false,
+              "new": false,
+              "load": 0.0
+            },
+            {
+              "id": 358,
+              "name": "Burger Bar 358",
+              "cuisine": "burger",
+              "eta": 24,
+              "promoted": false,
+              "new": false,
+              "load": 0.0
+            },
+            {
+              "id": 161,
+              "name": "Burger Bar 161",
+              "cuisine": "burger",
+              "eta": 21,
+              "promoted": false,
+              "new": false,
+              "load": 0.0
+            },
+            {
+              "id": 171,
+              "name": "Burger Bar 171",
+              "cuisine": "burger",
+              "eta": 22,
+              "promoted": false,
+              "new": false,
+              "load": 0.0
+            },
+            {
+              "id": 326,
+              "name": "Burger Bar 326",
+              "cuisine": "burger",
+              "eta": 17,
+              "promoted": false,
+              "new": false,
+              "load": 0.0
+            },
+            {
+              "id": 316,
+              "name": "Burger Bar 316",
+              "cuisine": "burger",
+              "eta": 25,
+              "promoted": false,
+              "new": false,
+              "load": 0.0
+            },
+            {
+              "id": 48,
+              "name": "Burger Bar 48",
+              "cuisine": "burger",
+              "eta": 17,
+              "promoted": false,
+              "new": false,
+              "load": 0.0
+            }
+          ]
+        },
+        {
+          "kind": "cuisine:italian",
+          "cards": [
+            {
+              "id": 442,
+              "name": "Trattoria 442",
+              "cuisine": "italian",
+              "eta": 18,
+              "promoted": false,
+              "new": false,
+              "load": 0.0
+            },
+            {
+              "id": 328,
+              "name": "Trattoria 328",
+              "cuisine": "italian",
+              "eta": 16,
+              "promoted": false,
+              "new": false,
+              "load": 0.0
+            },
+            {
+              "id": 199,
+              "name": "Trattoria 199",
+              "cuisine": "italian",
+              "eta": 23,
+              "promoted": false,
+              "new": false,
+              "load": 0.0
+            },
+            {
+              "id": 121,
+              "name": "Trattoria 121",
+              "cuisine": "italian",
+              "eta": 25,
+              "promoted": false,
+              "new": false,
+              "load": 0.0
+            },
+            {
+              "id": 158,
+              "name": "Trattoria 158",
+              "cuisine": "italian",
+              "eta": 24,
+              "promoted": false,
+              "new": false,
+              "load": 0.0
+            },
+            {
+              "id": 137,
+              "name": "Trattoria 137",
+              "cuisine": "italian",
+              "eta": 25,
+              "promoted": false,
+              "new": false,
+              "load": 0.0
+            },
+            {
+              "id": 327,
+              "name": "Trattoria 327",
+              "cuisine": "italian",
+              "eta": 27,
+              "promoted": false,
+              "new": false,
+              "load": 0.0
+            },
+            {
+              "id": 178,
+              "name": "Trattoria 178",
+              "cuisine": "italian",
+              "eta": 19,
+              "promoted": false,
+              "new": false,
+              "load": 0.0
+            }
+          ]
+        },
+        {
+          "kind": "cuisine:sushi",
+          "cards": [
+            {
+              "id": 185,
+              "name": "Sushi 185",
+              "cuisine": "sushi",
+              "eta": 28,
+              "promoted": false,
+              "new": false,
+              "load": 0.0
+            },
+            {
+              "id": 311,
+              "name": "Sushi 311",
+              "cuisine": "sushi",
+              "eta": 27,
+              "promoted": false,
+              "new": false,
+              "load": 0.0
+            },
+            {
+              "id": 0,
+              "name": "Sushi 0",
+              "cuisine": "sushi",
+              "eta": 24,
+              "promoted": false,
+              "new": false,
+              "load": 0.0
+            },
+            {
+              "id": 1,
+              "name": "Sushi 1",
+              "cuisine": "sushi",
+              "eta": 20,
+              "promoted": false,
+              "new": false,
+              "load": 0.0
+            },
+            {
+              "id": 68,
+              "name": "Sushi 68",
+              "cuisine": "sushi",
+              "eta": 32,
+              "promoted": true,
+              "new": false,
+              "load": 0.0
+            },
+            {
+              "id": 55,
+              "name": "Sushi 55",
+              "cuisine": "sushi",
+              "eta": 20,
+              "promoted": false,
+              "new": false,
+              "load": 0.0
+            },
+            {
+              "id": 359,
+              "name": "Sushi 359",
+              "cuisine": "sushi",
+              "eta": 33,
+              "promoted": true,
+              "new": false,
+              "load": 0.0
+            }
+          ]
+        },
+        {
+          "kind": "new",
+          "cards": [
+            {
+              "id": 334,
+              "name": "Seoul Grill 334",
+              "cuisine": "korean",
+              "eta": 20,
+              "promoted": false,
+              "new": true,
+              "load": 0.0
+            },
+            {
+              "id": 472,
+              "name": "Curry House 472",
+              "cuisine": "indian",
+              "eta": 23,
+              "promoted": false,
+              "new": true,
+              "load": 0.0
+            },
+            {
+              "id": 83,
+              "name": "Thai Kitchen 83",
+              "cuisine": "thai",
+              "eta": 23,
+              "promoted": false,
+              "new": true,
+              "load": 0.0
+            },
+            {
+              "id": 463,
+              "name": "Pho 463",
+              "cuisine": "vietnamese",
+              "eta": 34,
+              "promoted": true,
+              "new": true,
+              "load": 0.0
+            },
+            {
+              "id": 111,
+              "name": "D\u00f6ner 111",
+              "cuisine": "doner",
+              "eta": 24,
+              "promoted": false,
+              "new": true,
+              "load": 0.0
+            },
+            {
+              "id": 411,
+              "name": "Pizzeria 411",
+              "cuisine": "pizza",
+              "eta": 30,
+              "promoted": false,
+              "new": true,
+              "load": 0.0
+            },
+            {
+              "id": 462,
+              "name": "Wok 462",
+              "cuisine": "chinese",
+              "eta": 30,
+              "promoted": false,
+              "new": true,
+              "load": 0.0
+            },
+            {
+              "id": 69,
+              "name": "Taqueria 69",
+              "cuisine": "mexican",
+              "eta": 28,
+              "promoted": false,
+              "new": true,
+              "load": 0.0
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

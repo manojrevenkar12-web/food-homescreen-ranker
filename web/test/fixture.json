@@ -80,6 +80,30 @@
      "hi": 0.15
     }
    ]
+  },
+  "reranked": {
+   "truth": 0.05,
+   "customer_split": [
+    {
+     "diff": 0.055,
+     "lo": 0.045,
+     "hi": 0.065
+    }
+   ],
+   "customer_split_no_cuped": [
+    {
+     "diff": 0.06,
+     "lo": 0.04,
+     "hi": 0.08
+    }
+   ],
+   "switchback": [
+    {
+     "diff": 0.05,
+     "lo": 0.025,
+     "hi": 0.075
+    }
+   ]
   }
  },
  "gate": {

@@ -25,7 +25,7 @@ def main() -> None:
     city, world, logs, bundle = pipeline(seed)
     sessions = eval_sessions(city, seed)
     current = Heuristic(city.catalog, seed)
-    pre = logs.sessions.groupby("customer").ordered.sum()
+    pre = logs.sessions.groupby("customer").agg(orders=("ordered", "sum"), sessions=("sid", "size"))
     new_days = platform()["policy"]["new_days"]
     out = {"seed": seed, "block_hours": BLOCK_HOURS, "treatments": {}}
     for name, treatment in [

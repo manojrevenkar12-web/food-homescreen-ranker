@@ -23,6 +23,13 @@ describe("dashboard", () => {
     expect(screen.getAllByLabelText(/busy kitchen/).length).toBe(1);
   });
 
+  it("switches the A/B section to the other treatment", async () => {
+    render(<App fetcher={ok} />);
+    await screen.findByText("Against the truth");
+    fireEvent.click(screen.getByRole("radio", { name: "Re-ranked rows" }));
+    expect(screen.getByText(/today's rows, re-ranked for the whole week/)).toBeTruthy();
+  });
+
   it("offers a retry when the data does not load", async () => {
     let calls = 0;
     const flaky = async () => {
