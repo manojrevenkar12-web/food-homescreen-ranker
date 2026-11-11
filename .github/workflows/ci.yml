@@ -61,7 +61,7 @@ jobs:
           from airflow.models import DagBag
           bag = DagBag("dags", include_examples=False)
           assert not bag.import_errors, bag.import_errors
-          dag = bag.get_dag("home_ranker_daily")
+          dag = bag.dags["home_ranker_daily"]   # parsed DAG; no metadata database needed
           print([t.task_id for t in dag.topological_sort()])
           PY
 
