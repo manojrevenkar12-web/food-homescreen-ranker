@@ -14,7 +14,7 @@ from fhr.evals.online import eval_sessions, metrics, paired_lift
 from fhr.policies.heuristic import Heuristic
 from fhr.policies.learned import PageAssembler, Reranked
 
-from _common import pipeline, write
+from _common import REPORTS, pipeline, write
 
 BLOCK_HOURS = 3
 
@@ -32,6 +32,10 @@ def main() -> None:
         ("page", PageAssembler(city.catalog, bundle)),
         ("reranked", Reranked(city.catalog, bundle)),
     ]:
+        part = REPORTS / "partial" / f"experiments-{name}.json"
+        if part.exists():  # resumable after an interruption
+            out["treatments"][name] = json.loads(part.read_text())
+            continue
         t = time.perf_counter()
         base = world.fork().run(sessions, {"current": current}, lambda c: "current", seed + 2)
         full = world.fork().run(sessions, {name: treatment}, lambda c, n=name: n, seed + 2)
